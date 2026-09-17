@@ -1,0 +1,29 @@
+{
+  "society": {
+    "name": "Sunrise Heights CHS",
+    "totalFlats": 10,
+    "month": "September 2026"
+  },
+  "flats": [
+    { "flatNo": "101", "owner": "Rohan Mehta", "type": "owner", "occupied": true, "sqft": 950, "paid": true },
+    { "flatNo": "102", "owner": "Priya Shah", "type": "tenant", "occupied": true, "sqft": 950, "paid": true },
+    { "flatNo": "201", "owner": "Amit Kulkarni", "type": "owner", "occupied": true, "sqft": 1100, "paid": true },
+    { "flatNo": "202", "owner": "Sneha Rao", "type": "owner", "occupied": true, "sqft": 1100, "paid": false },
+    { "flatNo": "301", "owner": "Vikram Desai", "type": "owner", "occupied": true, "sqft": 950, "paid": true },
+    { "flatNo": "302", "owner": "N/A", "type": "vacant", "occupied": false, "sqft": 950, "paid": true },
+    { "flatNo": "401", "owner": "Anjali Iyer", "type": "tenant", "occupied": true, "sqft": 1100, "paid": true },
+    { "flatNo": "402", "owner": "Karan Malhotra", "type": "owner", "occupied": true, "sqft": 1100, "paid": true },
+    { "flatNo": "501", "owner": "Divya Nair", "type": "owner", "occupied": true, "sqft": 950, "paid": true },
+    { "flatNo": "502", "owner": "Sameer Joshi", "type": "owner", "occupied": true, "sqft": 950, "paid": true }
+  ],
+  "expenses": [
+    { "id": "E001", "category": "Security", "amount": 12000, "vendor": "Shield Guards Pvt Ltd", "date": "2026-09-03" },
+    { "id": "E002", "category": "Housekeeping", "amount": 8000, "vendor": "CleanPro Services", "date": "2026-09-04" },
+    { "id": "E003", "category": "Water", "amount": 50000, "vendor": "Municipal Water Board", "date": "2026-09-05", "note": "EDGE CASE: admin typo, should be 5000" },
+    { "id": "E004", "category": "Common Electricity", "amount": 9000, "vendor": "MSEB", "date": "2026-09-06" },
+    { "id": "E005", "category": "Common Electricity", "amount": 9000, "vendor": "MSEB", "date": "2026-09-06", "note": "EDGE CASE: duplicate of E004" },
+    { "id": "E006", "category": "Lift AMC", "amount": 5000, "vendor": "OtisCare AMC", "date": "2026-09-10" },
+    { "id": "E007", "category": "Reserve Fund", "amount": 5000, "vendor": "Internal Transfer", "date": "2026-09-15" }
+  ],
+  "totalCollected": "45000"
+}

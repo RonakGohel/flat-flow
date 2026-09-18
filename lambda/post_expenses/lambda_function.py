@@ -45,6 +45,7 @@ def lambda_handler(event, context):
     if not society_id:
         return build_response(400, {"message": "Missing required field: 'society_id'."})
     if not month:
+        
         return build_response(400, {"message": "Missing required field: 'month'."})
     if not expenses or not isinstance(expenses, list):
         return build_response(400, {"message": "Missing or invalid field: 'expenses'."})

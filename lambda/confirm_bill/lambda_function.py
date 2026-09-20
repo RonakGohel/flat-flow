@@ -4,7 +4,19 @@ import os
 import uuid
 from decimal import Decimal
 
-
+def require_group(event, allowed):
+    try:
+        claims = event['requestContext']['authorizer']['claims']
+    except (KeyError, TypeError):
+        return False, "Missing auth claims."
+    raw = claims.get('cognito:groups', '')
+    groups = raw if isinstance(raw, list) else raw.strip('[]').replace(',', ' ').split()
+    if isinstance(allowed, str):
+        allowed = [allowed]
+    if not any(g in groups for g in allowed):
+        return False, f"Access denied. Requires one of: {', '.join(allowed)}."
+    return True, None
+    
 dynamodb = boto3.resource("dynamodb")
 
 TABLE_NAME = os.environ.get("TABLE_NAME", "FlatFlow")
@@ -29,6 +41,10 @@ def build_response(status_code, body):
 
 def lambda_handler(event, context):
 
+    ok, err = require_group(event, 'admin')
+    if not ok:
+        return build_response(403, {"message": err})
+        
     try:
         body = json.loads(event.get("body", "{}"))
     except (json.JSONDecodeError, TypeError):

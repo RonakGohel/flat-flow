@@ -2,6 +2,3 @@
 __pycache__/
 *.pyc
 .pytest_cache/
-node_modules/
-.vscode/
-frontend/node_modules/

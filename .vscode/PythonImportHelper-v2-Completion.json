@@ -1,0 +1,689 @@
+[
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "boto3",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "boto3",
+        "description": "boto3",
+        "detail": "boto3",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "Key",
+        "importPath": "boto3.dynamodb.conditions",
+        "description": "boto3.dynamodb.conditions",
+        "isExtraImport": true,
+        "detail": "boto3.dynamodb.conditions",
+        "documentation": {}
+    },
+    {
+        "label": "Key",
+        "importPath": "boto3.dynamodb.conditions",
+        "description": "boto3.dynamodb.conditions",
+        "isExtraImport": true,
+        "detail": "boto3.dynamodb.conditions",
+        "documentation": {}
+    },
+    {
+        "label": "Key",
+        "importPath": "boto3.dynamodb.conditions",
+        "description": "boto3.dynamodb.conditions",
+        "isExtraImport": true,
+        "detail": "boto3.dynamodb.conditions",
+        "documentation": {}
+    },
+    {
+        "label": "Key",
+        "importPath": "boto3.dynamodb.conditions",
+        "description": "boto3.dynamodb.conditions",
+        "isExtraImport": true,
+        "detail": "boto3.dynamodb.conditions",
+        "documentation": {}
+    },
+    {
+        "label": "ClientError",
+        "importPath": "botocore.exceptions",
+        "description": "botocore.exceptions",
+        "isExtraImport": true,
+        "detail": "botocore.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "Decimal",
+        "importPath": "decimal",
+        "description": "decimal",
+        "isExtraImport": true,
+        "detail": "decimal",
+        "documentation": {}
+    },
+    {
+        "label": "ROUND_HALF_UP",
+        "importPath": "decimal",
+        "description": "decimal",
+        "isExtraImport": true,
+        "detail": "decimal",
+        "documentation": {}
+    },
+    {
+        "label": "Decimal",
+        "importPath": "decimal",
+        "description": "decimal",
+        "isExtraImport": true,
+        "detail": "decimal",
+        "documentation": {}
+    },
+    {
+        "label": "Decimal",
+        "importPath": "decimal",
+        "description": "decimal",
+        "isExtraImport": true,
+        "detail": "decimal",
+        "documentation": {}
+    },
+    {
+        "label": "ROUND_HALF_UP",
+        "importPath": "decimal",
+        "description": "decimal",
+        "isExtraImport": true,
+        "detail": "decimal",
+        "documentation": {}
+    },
+    {
+        "label": "Decimal",
+        "importPath": "decimal",
+        "description": "decimal",
+        "isExtraImport": true,
+        "detail": "decimal",
+        "documentation": {}
+    },
+    {
+        "label": "uuid",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "uuid",
+        "description": "uuid",
+        "detail": "uuid",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "importlib",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "importlib",
+        "description": "importlib",
+        "detail": "importlib",
+        "documentation": {}
+    },
+    {
+        "label": "pytest",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pytest",
+        "description": "pytest",
+        "detail": "pytest",
+        "documentation": {}
+    },
+    {
+        "label": "mock_aws",
+        "importPath": "moto",
+        "description": "moto",
+        "isExtraImport": true,
+        "detail": "moto",
+        "documentation": {}
+    },
+    {
+        "label": "defaultdict",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "mean",
+        "importPath": "statistics",
+        "description": "statistics",
+        "isExtraImport": true,
+        "detail": "statistics",
+        "documentation": {}
+    },
+    {
+        "label": "pstdev",
+        "importPath": "statistics",
+        "description": "statistics",
+        "isExtraImport": true,
+        "detail": "statistics",
+        "documentation": {}
+    },
+    {
+        "label": "_Known",
+        "kind": 6,
+        "importPath": "frontend.node_modules.flatted.python.flatted",
+        "description": "frontend.node_modules.flatted.python.flatted",
+        "peekOfCode": "class _Known:\n    def __init__(self):\n        self.key = []\n        self.value = []\nclass _String:\n    def __init__(self, value):\n        self.value = value\ndef _array_keys(value):\n    for i in range(len(value)):\n        yield i",
+        "detail": "frontend.node_modules.flatted.python.flatted",
+        "documentation": {}
+    },
+    {
+        "label": "_String",
+        "kind": 6,
+        "importPath": "frontend.node_modules.flatted.python.flatted",
+        "description": "frontend.node_modules.flatted.python.flatted",
+        "peekOfCode": "class _String:\n    def __init__(self, value):\n        self.value = value\ndef _array_keys(value):\n    for i in range(len(value)):\n        yield i\ndef _object_keys(value):\n    for key in value:\n        yield key\ndef _is_array(value):",
+        "detail": "frontend.node_modules.flatted.python.flatted",
+        "documentation": {}
+    },
+    {
+        "label": "parse",
+        "kind": 2,
+        "importPath": "frontend.node_modules.flatted.python.flatted",
+        "description": "frontend.node_modules.flatted.python.flatted",
+        "peekOfCode": "def parse(value, *args, **kwargs):\n    json = _json.loads(value, *args, **kwargs)\n    wrapped = []\n    for value in json:\n        wrapped.append(_wrap(value))\n    input = []\n    for value in wrapped:\n        if isinstance(value, _String):\n            input.append(value.value)\n        else:",
+        "detail": "frontend.node_modules.flatted.python.flatted",
+        "documentation": {}
+    },
+    {
+        "label": "stringify",
+        "kind": 2,
+        "importPath": "frontend.node_modules.flatted.python.flatted",
+        "description": "frontend.node_modules.flatted.python.flatted",
+        "peekOfCode": "def stringify(value, *args, **kwargs):\n    known = _Known()\n    input = []\n    output = []\n    i = int(_index(known, input, value))\n    while i < len(input):\n        output.append(_transform(known, input, input[i]))\n        i += 1\n    return _json.dumps(output, *args, **kwargs)",
+        "detail": "frontend.node_modules.flatted.python.flatted",
+        "documentation": {}
+    },
+    {
+        "label": "build_response",
+        "kind": 2,
+        "importPath": "lambda.admin_api.lambda_function",
+        "description": "lambda.admin_api.lambda_function",
+        "peekOfCode": "def build_response(status_code, body):\n    # Standard response wrapper for API Gateway compatibility.\n    # default=str ensures Python's Decimal types from DynamoDB serialize safely into JSON strings.\n    return {\n        \"statusCode\": status_code,\n        \"headers\": CORS_HEADERS,\n        \"body\": json.dumps(body, default=str)\n    }\ndef lambda_handler(event, context):\n    # GET requests pass query parameters in event['queryStringParameters'].",
+        "detail": "lambda.admin_api.lambda_function",
+        "documentation": {}
+    },
+    {
+        "label": "lambda_handler",
+        "kind": 2,
+        "importPath": "lambda.admin_api.lambda_function",
+        "description": "lambda.admin_api.lambda_function",
+        "peekOfCode": "def lambda_handler(event, context):\n    # GET requests pass query parameters in event['queryStringParameters'].\n    # We fallback to an empty dict so accessing parameters doesn't throw a NoneType error.\n    query_params = event.get('queryStringParameters') or {}\n    society_id = query_params.get('society_id')\n    month = query_params.get('month')\n    # Validate inputs upfront so administrative users get actionable error messages right away.\n    if not society_id:\n        return build_response(400, {\"message\": \"Missing required query parameter: 'society_id'.\"})\n    if not month:",
+        "detail": "lambda.admin_api.lambda_function",
+        "documentation": {}
+    },
+    {
+        "label": "dynamodb",
+        "kind": 5,
+        "importPath": "lambda.admin_api.lambda_function",
+        "description": "lambda.admin_api.lambda_function",
+        "peekOfCode": "dynamodb = boto3.resource('dynamodb')\nTABLE_NAME = os.environ.get('TABLE_NAME', 'FlatFlow')\ntable = dynamodb.Table(TABLE_NAME)\n# CORS headers so the admin dashboard on our React frontend can query expenses freely.\nCORS_HEADERS = {\n    \"Access-Control-Allow-Origin\": \"*\",\n    \"Access-Control-Allow-Headers\": \"Content-Type,Authorization\",\n    \"Access-Control-Allow-Methods\": \"GET,OPTIONS\",\n    \"Content-Type\": \"application/json\"\n}",
+        "detail": "lambda.admin_api.lambda_function",
+        "documentation": {}
+    },
+    {
+        "label": "TABLE_NAME",
+        "kind": 5,
+        "importPath": "lambda.admin_api.lambda_function",
+        "description": "lambda.admin_api.lambda_function",
+        "peekOfCode": "TABLE_NAME = os.environ.get('TABLE_NAME', 'FlatFlow')\ntable = dynamodb.Table(TABLE_NAME)\n# CORS headers so the admin dashboard on our React frontend can query expenses freely.\nCORS_HEADERS = {\n    \"Access-Control-Allow-Origin\": \"*\",\n    \"Access-Control-Allow-Headers\": \"Content-Type,Authorization\",\n    \"Access-Control-Allow-Methods\": \"GET,OPTIONS\",\n    \"Content-Type\": \"application/json\"\n}\ndef build_response(status_code, body):",
+        "detail": "lambda.admin_api.lambda_function",
+        "documentation": {}
+    },
+    {
+        "label": "table",
+        "kind": 5,
+        "importPath": "lambda.admin_api.lambda_function",
+        "description": "lambda.admin_api.lambda_function",
+        "peekOfCode": "table = dynamodb.Table(TABLE_NAME)\n# CORS headers so the admin dashboard on our React frontend can query expenses freely.\nCORS_HEADERS = {\n    \"Access-Control-Allow-Origin\": \"*\",\n    \"Access-Control-Allow-Headers\": \"Content-Type,Authorization\",\n    \"Access-Control-Allow-Methods\": \"GET,OPTIONS\",\n    \"Content-Type\": \"application/json\"\n}\ndef build_response(status_code, body):\n    # Standard response wrapper for API Gateway compatibility.",
+        "detail": "lambda.admin_api.lambda_function",
+        "documentation": {}
+    },
+    {
+        "label": "CORS_HEADERS",
+        "kind": 5,
+        "importPath": "lambda.admin_api.lambda_function",
+        "description": "lambda.admin_api.lambda_function",
+        "peekOfCode": "CORS_HEADERS = {\n    \"Access-Control-Allow-Origin\": \"*\",\n    \"Access-Control-Allow-Headers\": \"Content-Type,Authorization\",\n    \"Access-Control-Allow-Methods\": \"GET,OPTIONS\",\n    \"Content-Type\": \"application/json\"\n}\ndef build_response(status_code, body):\n    # Standard response wrapper for API Gateway compatibility.\n    # default=str ensures Python's Decimal types from DynamoDB serialize safely into JSON strings.\n    return {",
+        "detail": "lambda.admin_api.lambda_function",
+        "documentation": {}
+    },
+    {
+        "label": "build_response",
+        "kind": 2,
+        "importPath": "lambda.ai_chat.lambda_function",
+        "description": "lambda.ai_chat.lambda_function",
+        "peekOfCode": "def build_response(status_code, body):\n    # Helper to make sure every response has the right shape for API Gateway.\n    # We use default=str so Decimal values from DynamoDB don't crash json.dumps.\n    return {\n        \"statusCode\": status_code,\n        \"headers\": CORS_HEADERS,\n        \"body\": json.dumps(body, default=str)\n    }\ndef fetch_expenses(society_id, month):\n    # Query DynamoDB for all expenses belonging to this society in the given month.",
+        "detail": "lambda.ai_chat.lambda_function",
+        "documentation": {}
+    },
+    {
+        "label": "fetch_expenses",
+        "kind": 2,
+        "importPath": "lambda.ai_chat.lambda_function",
+        "description": "lambda.ai_chat.lambda_function",
+        "peekOfCode": "def fetch_expenses(society_id, month):\n    # Query DynamoDB for all expenses belonging to this society in the given month.\n    # Same key pattern as generate_statement: PK = SOCIETY#<id>, SK begins with EXPENSE#<month>.\n    pk = f\"SOCIETY#{society_id}\"\n    sk_prefix = f\"EXPENSE#{month}\"\n    response = table.query(\n        KeyConditionExpression=Key('PK').eq(pk) & Key('SK').begins_with(sk_prefix)\n    )\n    return response.get('Items', [])\ndef build_expense_summary(items):",
+        "detail": "lambda.ai_chat.lambda_function",
+        "documentation": {}
+    },
+    {
+        "label": "build_expense_summary",
+        "kind": 2,
+        "importPath": "lambda.ai_chat.lambda_function",
+        "description": "lambda.ai_chat.lambda_function",
+        "peekOfCode": "def build_expense_summary(items):\n    # Turn the raw DynamoDB items into a readable summary string for the AI.\n    # We keep it simple — category, amount, description — so the model has\n    # clean data to work with and doesn't have to parse DynamoDB key formats.\n    if not items:\n        return \"No expenses recorded for this period.\"\n    lines = []\n    total = 0\n    for item in items:\n        category = item.get('category', 'Unknown')",
+        "detail": "lambda.ai_chat.lambda_function",
+        "documentation": {}
+    },
+    {
+        "label": "lambda_handler",
+        "kind": 2,
+        "importPath": "lambda.ai_chat.lambda_function",
+        "description": "lambda.ai_chat.lambda_function",
+        "peekOfCode": "def lambda_handler(event, context):\n    # Parse the incoming request body. API Gateway sends it as a raw string.\n    try:\n        body = json.loads(event.get('body', '{}'))\n    except (json.JSONDecodeError, TypeError):\n        return build_response(400, {\"message\": \"Invalid JSON in request body.\"})\n    society_id = body.get('society_id')\n    month = body.get('month')\n    resident_question = body.get('resident_question')\n    # Validate all three required fields upfront so the frontend gets clear error messages.",
+        "detail": "lambda.ai_chat.lambda_function",
+        "documentation": {}
+    },
+    {
+        "label": "dynamodb",
+        "kind": 5,
+        "importPath": "lambda.ai_chat.lambda_function",
+        "description": "lambda.ai_chat.lambda_function",
+        "peekOfCode": "dynamodb = boto3.resource('dynamodb')\nTABLE_NAME = os.environ.get('TABLE_NAME', 'FlatFlow')\ntable = dynamodb.Table(TABLE_NAME)\n# Bedrock client for calling Claude. We use bedrock-runtime (not bedrock)\n# because we're invoking a model, not managing one.\nbedrock_runtime = boto3.client('bedrock-runtime')\nMODEL_ID = 'anthropic.claude-3-haiku-20240307-v1:0'\n# CORS headers so our React frontend can call this endpoint without the browser blocking it.\nCORS_HEADERS = {\n    \"Access-Control-Allow-Origin\": \"*\",",
+        "detail": "lambda.ai_chat.lambda_function",
+        "documentation": {}
+    },
+    {
+        "label": "TABLE_NAME",
+        "kind": 5,
+        "importPath": "lambda.ai_chat.lambda_function",
+        "description": "lambda.ai_chat.lambda_function",
+        "peekOfCode": "TABLE_NAME = os.environ.get('TABLE_NAME', 'FlatFlow')\ntable = dynamodb.Table(TABLE_NAME)\n# Bedrock client for calling Claude. We use bedrock-runtime (not bedrock)\n# because we're invoking a model, not managing one.\nbedrock_runtime = boto3.client('bedrock-runtime')\nMODEL_ID = 'anthropic.claude-3-haiku-20240307-v1:0'\n# CORS headers so our React frontend can call this endpoint without the browser blocking it.\nCORS_HEADERS = {\n    \"Access-Control-Allow-Origin\": \"*\",\n    \"Access-Control-Allow-Headers\": \"Content-Type,Authorization\",",
+        "detail": "lambda.ai_chat.lambda_function",
+        "documentation": {}
+    },
+    {
+        "label": "table",
+        "kind": 5,
+        "importPath": "lambda.ai_chat.lambda_function",
+        "description": "lambda.ai_chat.lambda_function",
+        "peekOfCode": "table = dynamodb.Table(TABLE_NAME)\n# Bedrock client for calling Claude. We use bedrock-runtime (not bedrock)\n# because we're invoking a model, not managing one.\nbedrock_runtime = boto3.client('bedrock-runtime')\nMODEL_ID = 'anthropic.claude-3-haiku-20240307-v1:0'\n# CORS headers so our React frontend can call this endpoint without the browser blocking it.\nCORS_HEADERS = {\n    \"Access-Control-Allow-Origin\": \"*\",\n    \"Access-Control-Allow-Headers\": \"Content-Type,Authorization\",\n    \"Access-Control-Allow-Methods\": \"POST,OPTIONS\",",
+        "detail": "lambda.ai_chat.lambda_function",
+        "documentation": {}
+    },
+    {
+        "label": "bedrock_runtime",
+        "kind": 5,
+        "importPath": "lambda.ai_chat.lambda_function",
+        "description": "lambda.ai_chat.lambda_function",
+        "peekOfCode": "bedrock_runtime = boto3.client('bedrock-runtime')\nMODEL_ID = 'anthropic.claude-3-haiku-20240307-v1:0'\n# CORS headers so our React frontend can call this endpoint without the browser blocking it.\nCORS_HEADERS = {\n    \"Access-Control-Allow-Origin\": \"*\",\n    \"Access-Control-Allow-Headers\": \"Content-Type,Authorization\",\n    \"Access-Control-Allow-Methods\": \"POST,OPTIONS\",\n    \"Content-Type\": \"application/json\"\n}\ndef build_response(status_code, body):",
+        "detail": "lambda.ai_chat.lambda_function",
+        "documentation": {}
+    },
+    {
+        "label": "MODEL_ID",
+        "kind": 5,
+        "importPath": "lambda.ai_chat.lambda_function",
+        "description": "lambda.ai_chat.lambda_function",
+        "peekOfCode": "MODEL_ID = 'anthropic.claude-3-haiku-20240307-v1:0'\n# CORS headers so our React frontend can call this endpoint without the browser blocking it.\nCORS_HEADERS = {\n    \"Access-Control-Allow-Origin\": \"*\",\n    \"Access-Control-Allow-Headers\": \"Content-Type,Authorization\",\n    \"Access-Control-Allow-Methods\": \"POST,OPTIONS\",\n    \"Content-Type\": \"application/json\"\n}\ndef build_response(status_code, body):\n    # Helper to make sure every response has the right shape for API Gateway.",
+        "detail": "lambda.ai_chat.lambda_function",
+        "documentation": {}
+    },
+    {
+        "label": "CORS_HEADERS",
+        "kind": 5,
+        "importPath": "lambda.ai_chat.lambda_function",
+        "description": "lambda.ai_chat.lambda_function",
+        "peekOfCode": "CORS_HEADERS = {\n    \"Access-Control-Allow-Origin\": \"*\",\n    \"Access-Control-Allow-Headers\": \"Content-Type,Authorization\",\n    \"Access-Control-Allow-Methods\": \"POST,OPTIONS\",\n    \"Content-Type\": \"application/json\"\n}\ndef build_response(status_code, body):\n    # Helper to make sure every response has the right shape for API Gateway.\n    # We use default=str so Decimal values from DynamoDB don't crash json.dumps.\n    return {",
+        "detail": "lambda.ai_chat.lambda_function",
+        "documentation": {}
+    },
+    {
+        "label": "build_response",
+        "kind": 2,
+        "importPath": "lambda.generate_statement.lambda_function",
+        "description": "lambda.generate_statement.lambda_function",
+        "peekOfCode": "def build_response(status_code, body):\n    # Helper to make sure every response has the right shape for API Gateway.\n    # We also need to convert Decimal values to strings before json.dumps,\n    # because Python's json module doesn't know how to handle Decimals.\n    return {\n        \"statusCode\": status_code,\n        \"headers\": CORS_HEADERS,\n        \"body\": json.dumps(body, default=str)\n    }\ndef lambda_handler(event, context):",
+        "detail": "lambda.generate_statement.lambda_function",
+        "documentation": {}
+    },
+    {
+        "label": "lambda_handler",
+        "kind": 2,
+        "importPath": "lambda.generate_statement.lambda_function",
+        "description": "lambda.generate_statement.lambda_function",
+        "peekOfCode": "def lambda_handler(event, context):\n    # Parse the incoming request body. API Gateway sends it as a raw string.\n    try:\n        body = json.loads(event.get('body', '{}'))\n    except (json.JSONDecodeError, TypeError):\n        return build_response(400, {\"message\": \"Invalid JSON in request body.\"})\n    society_id = body.get('society_id')\n    month = body.get('month')\n    total_flats = body.get('total_flats')\n    # Validate all three required fields upfront so the frontend gets clear error messages.",
+        "detail": "lambda.generate_statement.lambda_function",
+        "documentation": {}
+    },
+    {
+        "label": "dynamodb",
+        "kind": 5,
+        "importPath": "lambda.generate_statement.lambda_function",
+        "description": "lambda.generate_statement.lambda_function",
+        "peekOfCode": "dynamodb = boto3.resource('dynamodb')\nTABLE_NAME = os.environ.get('TABLE_NAME', 'FlatFlow')\ntable = dynamodb.Table(TABLE_NAME)\n# CORS headers so our React frontend can call this endpoint without the browser blocking it.\nCORS_HEADERS = {\n    \"Access-Control-Allow-Origin\": \"*\",\n    \"Access-Control-Allow-Headers\": \"Content-Type,Authorization\",\n    \"Access-Control-Allow-Methods\": \"POST,OPTIONS\",\n    \"Content-Type\": \"application/json\"\n}",
+        "detail": "lambda.generate_statement.lambda_function",
+        "documentation": {}
+    },
+    {
+        "label": "TABLE_NAME",
+        "kind": 5,
+        "importPath": "lambda.generate_statement.lambda_function",
+        "description": "lambda.generate_statement.lambda_function",
+        "peekOfCode": "TABLE_NAME = os.environ.get('TABLE_NAME', 'FlatFlow')\ntable = dynamodb.Table(TABLE_NAME)\n# CORS headers so our React frontend can call this endpoint without the browser blocking it.\nCORS_HEADERS = {\n    \"Access-Control-Allow-Origin\": \"*\",\n    \"Access-Control-Allow-Headers\": \"Content-Type,Authorization\",\n    \"Access-Control-Allow-Methods\": \"POST,OPTIONS\",\n    \"Content-Type\": \"application/json\"\n}\ndef build_response(status_code, body):",
+        "detail": "lambda.generate_statement.lambda_function",
+        "documentation": {}
+    },
+    {
+        "label": "table",
+        "kind": 5,
+        "importPath": "lambda.generate_statement.lambda_function",
+        "description": "lambda.generate_statement.lambda_function",
+        "peekOfCode": "table = dynamodb.Table(TABLE_NAME)\n# CORS headers so our React frontend can call this endpoint without the browser blocking it.\nCORS_HEADERS = {\n    \"Access-Control-Allow-Origin\": \"*\",\n    \"Access-Control-Allow-Headers\": \"Content-Type,Authorization\",\n    \"Access-Control-Allow-Methods\": \"POST,OPTIONS\",\n    \"Content-Type\": \"application/json\"\n}\ndef build_response(status_code, body):\n    # Helper to make sure every response has the right shape for API Gateway.",
+        "detail": "lambda.generate_statement.lambda_function",
+        "documentation": {}
+    },
+    {
+        "label": "CORS_HEADERS",
+        "kind": 5,
+        "importPath": "lambda.generate_statement.lambda_function",
+        "description": "lambda.generate_statement.lambda_function",
+        "peekOfCode": "CORS_HEADERS = {\n    \"Access-Control-Allow-Origin\": \"*\",\n    \"Access-Control-Allow-Headers\": \"Content-Type,Authorization\",\n    \"Access-Control-Allow-Methods\": \"POST,OPTIONS\",\n    \"Content-Type\": \"application/json\"\n}\ndef build_response(status_code, body):\n    # Helper to make sure every response has the right shape for API Gateway.\n    # We also need to convert Decimal values to strings before json.dumps,\n    # because Python's json module doesn't know how to handle Decimals.",
+        "detail": "lambda.generate_statement.lambda_function",
+        "documentation": {}
+    },
+    {
+        "label": "build_response",
+        "kind": 2,
+        "importPath": "lambda.post_expenses.lambda_function",
+        "description": "lambda.post_expenses.lambda_function",
+        "peekOfCode": "def build_response(status_code, body):\n    # API Gateway expects a very specific shape, so we use this helper \n    # to make sure every response (success or error) has the right headers.\n    return {\n        \"statusCode\": status_code,\n        \"headers\": CORS_HEADERS,\n        \"body\": json.dumps(body)  # API GW needs this to be a string, not a dict\n    }\ndef lambda_handler(event, context):\n    # API Gateway sends the request body as a raw string, so we have to parse it.",
+        "detail": "lambda.post_expenses.lambda_function",
+        "documentation": {}
+    },
+    {
+        "label": "lambda_handler",
+        "kind": 2,
+        "importPath": "lambda.post_expenses.lambda_function",
+        "description": "lambda.post_expenses.lambda_function",
+        "peekOfCode": "def lambda_handler(event, context):\n    # API Gateway sends the request body as a raw string, so we have to parse it.\n    # If the JSON is broken, we catch it here and send back a 400.\n    try:\n        body = json.loads(event.get('body', '{}'))\n    except (json.JSONDecodeError, TypeError):\n        return build_response(400, {\"message\": \"Invalid JSON in request body.\"})\n    # Grab the fields we need. Being specific with error messages \n    # saves the frontend team from guessing what went wrong.\n    society_id = body.get('society_id')",
+        "detail": "lambda.post_expenses.lambda_function",
+        "documentation": {}
+    },
+    {
+        "label": "dynamodb",
+        "kind": 5,
+        "importPath": "lambda.post_expenses.lambda_function",
+        "description": "lambda.post_expenses.lambda_function",
+        "peekOfCode": "dynamodb = boto3.resource('dynamodb')\nTABLE_NAME = os.environ.get('TABLE_NAME', 'FlatFlow')\ntable = dynamodb.Table(TABLE_NAME)\n# The browser will block our React app from talking to this API unless we allow CORS. \n# We put this in one place so we don't forget it on any response.\nCORS_HEADERS = {\n    \"Access-Control-Allow-Origin\": \"*\",\n    \"Access-Control-Allow-Headers\": \"Content-Type,Authorization\",\n    \"Access-Control-Allow-Methods\": \"POST,OPTIONS\",\n    \"Content-Type\": \"application/json\"",
+        "detail": "lambda.post_expenses.lambda_function",
+        "documentation": {}
+    },
+    {
+        "label": "TABLE_NAME",
+        "kind": 5,
+        "importPath": "lambda.post_expenses.lambda_function",
+        "description": "lambda.post_expenses.lambda_function",
+        "peekOfCode": "TABLE_NAME = os.environ.get('TABLE_NAME', 'FlatFlow')\ntable = dynamodb.Table(TABLE_NAME)\n# The browser will block our React app from talking to this API unless we allow CORS. \n# We put this in one place so we don't forget it on any response.\nCORS_HEADERS = {\n    \"Access-Control-Allow-Origin\": \"*\",\n    \"Access-Control-Allow-Headers\": \"Content-Type,Authorization\",\n    \"Access-Control-Allow-Methods\": \"POST,OPTIONS\",\n    \"Content-Type\": \"application/json\"\n}",
+        "detail": "lambda.post_expenses.lambda_function",
+        "documentation": {}
+    },
+    {
+        "label": "table",
+        "kind": 5,
+        "importPath": "lambda.post_expenses.lambda_function",
+        "description": "lambda.post_expenses.lambda_function",
+        "peekOfCode": "table = dynamodb.Table(TABLE_NAME)\n# The browser will block our React app from talking to this API unless we allow CORS. \n# We put this in one place so we don't forget it on any response.\nCORS_HEADERS = {\n    \"Access-Control-Allow-Origin\": \"*\",\n    \"Access-Control-Allow-Headers\": \"Content-Type,Authorization\",\n    \"Access-Control-Allow-Methods\": \"POST,OPTIONS\",\n    \"Content-Type\": \"application/json\"\n}\ndef build_response(status_code, body):",
+        "detail": "lambda.post_expenses.lambda_function",
+        "documentation": {}
+    },
+    {
+        "label": "CORS_HEADERS",
+        "kind": 5,
+        "importPath": "lambda.post_expenses.lambda_function",
+        "description": "lambda.post_expenses.lambda_function",
+        "peekOfCode": "CORS_HEADERS = {\n    \"Access-Control-Allow-Origin\": \"*\",\n    \"Access-Control-Allow-Headers\": \"Content-Type,Authorization\",\n    \"Access-Control-Allow-Methods\": \"POST,OPTIONS\",\n    \"Content-Type\": \"application/json\"\n}\ndef build_response(status_code, body):\n    # API Gateway expects a very specific shape, so we use this helper \n    # to make sure every response (success or error) has the right headers.\n    return {",
+        "detail": "lambda.post_expenses.lambda_function",
+        "documentation": {}
+    },
+    {
+        "label": "build_response",
+        "kind": 2,
+        "importPath": "lambda.resident_api.lambda_function",
+        "description": "lambda.resident_api.lambda_function",
+        "peekOfCode": "def build_response(status_code, body):\n    # Helper to make sure every response has the right shape for API Gateway.\n    # We use default=str so Decimal values from DynamoDB don't crash json.dumps.\n    return {\n        \"statusCode\": status_code,\n        \"headers\": CORS_HEADERS,\n        \"body\": json.dumps(body, default=str)\n    }\ndef lambda_handler(event, context):\n    # GET requests send parameters in query string parameters instead of a JSON request body.",
+        "detail": "lambda.resident_api.lambda_function",
+        "documentation": {}
+    },
+    {
+        "label": "lambda_handler",
+        "kind": 2,
+        "importPath": "lambda.resident_api.lambda_function",
+        "description": "lambda.resident_api.lambda_function",
+        "peekOfCode": "def lambda_handler(event, context):\n    # GET requests send parameters in query string parameters instead of a JSON request body.\n    # We extract queryStringParameters safely in case the caller sends no parameters at all.\n    query_params = event.get('queryStringParameters') or {}\n    society_id = query_params.get('society_id')\n    month = query_params.get('month')\n    # Validate query string parameters upfront so the caller gets helpful 400 responses.\n    if not society_id:\n        return build_response(400, {\"message\": \"Missing required query parameter: 'society_id'.\"})\n    if not month:",
+        "detail": "lambda.resident_api.lambda_function",
+        "documentation": {}
+    },
+    {
+        "label": "dynamodb",
+        "kind": 5,
+        "importPath": "lambda.resident_api.lambda_function",
+        "description": "lambda.resident_api.lambda_function",
+        "peekOfCode": "dynamodb = boto3.resource('dynamodb')\nTABLE_NAME = os.environ.get('TABLE_NAME', 'FlatFlow')\ntable = dynamodb.Table(TABLE_NAME)\n# Hardcoded default total flats for now, as requested.\n# In a future task, this could be stored in society metadata.\nDEFAULT_TOTAL_FLATS = 20\n# CORS headers so our React frontend can call this GET endpoint without the browser blocking it.\nCORS_HEADERS = {\n    \"Access-Control-Allow-Origin\": \"*\",\n    \"Access-Control-Allow-Headers\": \"Content-Type,Authorization\",",
+        "detail": "lambda.resident_api.lambda_function",
+        "documentation": {}
+    },
+    {
+        "label": "TABLE_NAME",
+        "kind": 5,
+        "importPath": "lambda.resident_api.lambda_function",
+        "description": "lambda.resident_api.lambda_function",
+        "peekOfCode": "TABLE_NAME = os.environ.get('TABLE_NAME', 'FlatFlow')\ntable = dynamodb.Table(TABLE_NAME)\n# Hardcoded default total flats for now, as requested.\n# In a future task, this could be stored in society metadata.\nDEFAULT_TOTAL_FLATS = 20\n# CORS headers so our React frontend can call this GET endpoint without the browser blocking it.\nCORS_HEADERS = {\n    \"Access-Control-Allow-Origin\": \"*\",\n    \"Access-Control-Allow-Headers\": \"Content-Type,Authorization\",\n    \"Access-Control-Allow-Methods\": \"GET,OPTIONS\",",
+        "detail": "lambda.resident_api.lambda_function",
+        "documentation": {}
+    },
+    {
+        "label": "table",
+        "kind": 5,
+        "importPath": "lambda.resident_api.lambda_function",
+        "description": "lambda.resident_api.lambda_function",
+        "peekOfCode": "table = dynamodb.Table(TABLE_NAME)\n# Hardcoded default total flats for now, as requested.\n# In a future task, this could be stored in society metadata.\nDEFAULT_TOTAL_FLATS = 20\n# CORS headers so our React frontend can call this GET endpoint without the browser blocking it.\nCORS_HEADERS = {\n    \"Access-Control-Allow-Origin\": \"*\",\n    \"Access-Control-Allow-Headers\": \"Content-Type,Authorization\",\n    \"Access-Control-Allow-Methods\": \"GET,OPTIONS\",\n    \"Content-Type\": \"application/json\"",
+        "detail": "lambda.resident_api.lambda_function",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_TOTAL_FLATS",
+        "kind": 5,
+        "importPath": "lambda.resident_api.lambda_function",
+        "description": "lambda.resident_api.lambda_function",
+        "peekOfCode": "DEFAULT_TOTAL_FLATS = 20\n# CORS headers so our React frontend can call this GET endpoint without the browser blocking it.\nCORS_HEADERS = {\n    \"Access-Control-Allow-Origin\": \"*\",\n    \"Access-Control-Allow-Headers\": \"Content-Type,Authorization\",\n    \"Access-Control-Allow-Methods\": \"GET,OPTIONS\",\n    \"Content-Type\": \"application/json\"\n}\ndef build_response(status_code, body):\n    # Helper to make sure every response has the right shape for API Gateway.",
+        "detail": "lambda.resident_api.lambda_function",
+        "documentation": {}
+    },
+    {
+        "label": "CORS_HEADERS",
+        "kind": 5,
+        "importPath": "lambda.resident_api.lambda_function",
+        "description": "lambda.resident_api.lambda_function",
+        "peekOfCode": "CORS_HEADERS = {\n    \"Access-Control-Allow-Origin\": \"*\",\n    \"Access-Control-Allow-Headers\": \"Content-Type,Authorization\",\n    \"Access-Control-Allow-Methods\": \"GET,OPTIONS\",\n    \"Content-Type\": \"application/json\"\n}\ndef build_response(status_code, body):\n    # Helper to make sure every response has the right shape for API Gateway.\n    # We use default=str so Decimal values from DynamoDB don't crash json.dumps.\n    return {",
+        "detail": "lambda.resident_api.lambda_function",
+        "documentation": {}
+    },
+    {
+        "label": "TestHappyPath",
+        "kind": 6,
+        "importPath": "tests.test_lambda_post_expenses",
+        "description": "tests.test_lambda_post_expenses",
+        "peekOfCode": "class TestHappyPath:\n    def test_single_expense(self, dynamodb_table):\n        table, mod = dynamodb_table\n        event = _make_event({\n            \"society_id\": \"SOC001\",\n            \"month\": \"2026-09\",\n            \"expenses\": [\n                {\"category\": \"Security\", \"amount\": 12000, \"description\": \"Shield Guards monthly\"}\n            ],\n        })",
+        "detail": "tests.test_lambda_post_expenses",
+        "documentation": {}
+    },
+    {
+        "label": "TestValidation",
+        "kind": 6,
+        "importPath": "tests.test_lambda_post_expenses",
+        "description": "tests.test_lambda_post_expenses",
+        "peekOfCode": "class TestValidation:\n    def test_missing_society_id(self, dynamodb_table):\n        _, mod = dynamodb_table\n        event = _make_event({\"month\": \"2026-09\", \"expenses\": [{\"category\": \"X\", \"amount\": 1, \"description\": \"Y\"}]})\n        resp = mod.lambda_handler(event, None)\n        assert resp[\"statusCode\"] == 400\n        assert \"society_id\" in json.loads(resp[\"body\"])[\"message\"]\n    def test_missing_month(self, dynamodb_table):\n        _, mod = dynamodb_table\n        event = _make_event({\"society_id\": \"SOC001\", \"expenses\": [{\"category\": \"X\", \"amount\": 1, \"description\": \"Y\"}]})",
+        "detail": "tests.test_lambda_post_expenses",
+        "documentation": {}
+    },
+    {
+        "label": "TestBadBody",
+        "kind": 6,
+        "importPath": "tests.test_lambda_post_expenses",
+        "description": "tests.test_lambda_post_expenses",
+        "peekOfCode": "class TestBadBody:\n    def test_invalid_json(self, dynamodb_table):\n        _, mod = dynamodb_table\n        event = {\"body\": \"{{broken json\", \"httpMethod\": \"POST\"}\n        resp = mod.lambda_handler(event, None)\n        assert resp[\"statusCode\"] == 400\n        assert \"Invalid JSON\" in json.loads(resp[\"body\"])[\"message\"]\n    def test_null_body(self, dynamodb_table):\n        _, mod = dynamodb_table\n        event = {\"body\": None, \"httpMethod\": \"POST\"}",
+        "detail": "tests.test_lambda_post_expenses",
+        "documentation": {}
+    },
+    {
+        "label": "TestSortKeyUniqueness",
+        "kind": 6,
+        "importPath": "tests.test_lambda_post_expenses",
+        "description": "tests.test_lambda_post_expenses",
+        "peekOfCode": "class TestSortKeyUniqueness:\n    def test_same_category_twice_does_not_overwrite(self, dynamodb_table):\n        \"\"\"Two 'Security' expenses in the same month must create two separate items.\"\"\"\n        table, mod = dynamodb_table\n        event = _make_event({\n            \"society_id\": \"SOC001\",\n            \"month\": \"2026-09\",\n            \"expenses\": [\n                {\"category\": \"Security\", \"amount\": 12000, \"description\": \"First guard bill\"},\n                {\"category\": \"Security\", \"amount\": 8000, \"description\": \"Second guard bill\"},",
+        "detail": "tests.test_lambda_post_expenses",
+        "documentation": {}
+    },
+    {
+        "label": "dynamodb_table",
+        "kind": 2,
+        "importPath": "tests.test_lambda_post_expenses",
+        "description": "tests.test_lambda_post_expenses",
+        "peekOfCode": "def dynamodb_table():\n    \"\"\"Spin up a fake DynamoDB table that matches our single-table design.\"\"\"\n    with mock_aws():\n        client = boto3.resource(\"dynamodb\", region_name=\"ap-south-1\")\n        table = client.create_table(\n            TableName=\"FlatFlow\",\n            KeySchema=[\n                {\"AttributeName\": \"PK\", \"KeyType\": \"HASH\"},\n                {\"AttributeName\": \"SK\", \"KeyType\": \"RANGE\"},\n            ],",
+        "detail": "tests.test_lambda_post_expenses",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"TABLE_NAME\"]",
+        "kind": 5,
+        "importPath": "tests.test_lambda_post_expenses",
+        "description": "tests.test_lambda_post_expenses",
+        "peekOfCode": "os.environ[\"TABLE_NAME\"] = \"FlatFlow\"\nos.environ[\"AWS_DEFAULT_REGION\"] = \"ap-south-1\"\nos.environ[\"AWS_ACCESS_KEY_ID\"] = \"testing\"\nos.environ[\"AWS_SECRET_ACCESS_KEY\"] = \"testing\"\ndef _load_lambda_module():\n    \"\"\"Import lambda/post_expenses/lambda_function.py despite 'lambda' being a keyword.\"\"\"\n    project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))\n    module_path = os.path.join(project_root, \"lambda\", \"post_expenses\", \"lambda_function.py\")\n    spec = importlib.util.spec_from_file_location(\"lambda_function\", module_path)\n    mod = importlib.util.module_from_spec(spec)",
+        "detail": "tests.test_lambda_post_expenses",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"AWS_DEFAULT_REGION\"]",
+        "kind": 5,
+        "importPath": "tests.test_lambda_post_expenses",
+        "description": "tests.test_lambda_post_expenses",
+        "peekOfCode": "os.environ[\"AWS_DEFAULT_REGION\"] = \"ap-south-1\"\nos.environ[\"AWS_ACCESS_KEY_ID\"] = \"testing\"\nos.environ[\"AWS_SECRET_ACCESS_KEY\"] = \"testing\"\ndef _load_lambda_module():\n    \"\"\"Import lambda/post_expenses/lambda_function.py despite 'lambda' being a keyword.\"\"\"\n    project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))\n    module_path = os.path.join(project_root, \"lambda\", \"post_expenses\", \"lambda_function.py\")\n    spec = importlib.util.spec_from_file_location(\"lambda_function\", module_path)\n    mod = importlib.util.module_from_spec(spec)\n    spec.loader.exec_module(mod)",
+        "detail": "tests.test_lambda_post_expenses",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"AWS_ACCESS_KEY_ID\"]",
+        "kind": 5,
+        "importPath": "tests.test_lambda_post_expenses",
+        "description": "tests.test_lambda_post_expenses",
+        "peekOfCode": "os.environ[\"AWS_ACCESS_KEY_ID\"] = \"testing\"\nos.environ[\"AWS_SECRET_ACCESS_KEY\"] = \"testing\"\ndef _load_lambda_module():\n    \"\"\"Import lambda/post_expenses/lambda_function.py despite 'lambda' being a keyword.\"\"\"\n    project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))\n    module_path = os.path.join(project_root, \"lambda\", \"post_expenses\", \"lambda_function.py\")\n    spec = importlib.util.spec_from_file_location(\"lambda_function\", module_path)\n    mod = importlib.util.module_from_spec(spec)\n    spec.loader.exec_module(mod)\n    return mod",
+        "detail": "tests.test_lambda_post_expenses",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"AWS_SECRET_ACCESS_KEY\"]",
+        "kind": 5,
+        "importPath": "tests.test_lambda_post_expenses",
+        "description": "tests.test_lambda_post_expenses",
+        "peekOfCode": "os.environ[\"AWS_SECRET_ACCESS_KEY\"] = \"testing\"\ndef _load_lambda_module():\n    \"\"\"Import lambda/post_expenses/lambda_function.py despite 'lambda' being a keyword.\"\"\"\n    project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))\n    module_path = os.path.join(project_root, \"lambda\", \"post_expenses\", \"lambda_function.py\")\n    spec = importlib.util.spec_from_file_location(\"lambda_function\", module_path)\n    mod = importlib.util.module_from_spec(spec)\n    spec.loader.exec_module(mod)\n    return mod\n@pytest.fixture",
+        "detail": "tests.test_lambda_post_expenses",
+        "documentation": {}
+    },
+    {
+        "label": "check_duplicates",
+        "kind": 2,
+        "importPath": "Validation",
+        "description": "Validation",
+        "peekOfCode": "def check_duplicates(expenses):\n    \"\"\"Flag expenses that share category + vendor + amount + month.\n    Catches E004/E005 in the sample data (same electricity bill twice).\"\"\"\n    seen = defaultdict(list)\n    for e in expenses:\n        key = (e[\"category\"], e[\"vendor\"], e[\"amount\"], e[\"date\"][:7])  # YYYY-MM\n        seen[key].append(e[\"id\"])\n    flags = []\n    for key, ids in seen.items():\n        if len(ids) > 1:",
+        "detail": "Validation",
+        "documentation": {}
+    },
+    {
+        "label": "check_outliers",
+        "kind": 2,
+        "importPath": "Validation",
+        "description": "Validation",
+        "peekOfCode": "def check_outliers(expenses, history=None):\n    \"\"\"Flag expenses that are way above their category's typical value.\n    Without real history, this falls back to comparing against the current\n    month's other categories, which is weak — replace `history` with actual\n    past-month data as soon as you have more than one month of it.\n    Catches E003 (₹50,000 water bill instead of ₹5,000).\"\"\"\n    flags = []\n    if history:\n        by_cat = defaultdict(list)\n        for e in history:",
+        "detail": "Validation",
+        "documentation": {}
+    },
+    {
+        "label": "check_missing_categories",
+        "kind": 2,
+        "importPath": "Validation",
+        "description": "Validation",
+        "peekOfCode": "def check_missing_categories(expenses, expected=EXPECTED_CATEGORIES):\n    \"\"\"Flag categories that are normally billed but absent this month.\n    Catches Generator Diesel being missing entirely.\"\"\"\n    present = {e[\"category\"] for e in expenses}\n    missing = expected - present\n    if not missing:\n        return []\n    return [{\n        \"type\": \"MISSING_CATEGORY\",\n        \"categories\": sorted(missing),",
+        "detail": "Validation",
+        "documentation": {}
+    },
+    {
+        "label": "check_reconciliation",
+        "kind": 2,
+        "importPath": "Validation",
+        "description": "Validation",
+        "peekOfCode": "def check_reconciliation(expenses, total_collected, duplicate_flags):\n    \"\"\"Flag when total expenses don't match total collected.\n    Nets out amounts already caught as duplicates so the mismatch reported\n    here isn't double-counting an error you already flagged separately.\"\"\"\n    duplicate_ids = {eid for f in duplicate_flags for eid in f[\"expense_ids\"][1:]}\n    net_expenses = sum(e[\"amount\"] for e in expenses if e[\"id\"] not in duplicate_ids)\n    delta = net_expenses - total_collected\n    if abs(delta) < 1:  # rounding tolerance\n        return []\n    return [{",
+        "detail": "Validation",
+        "documentation": {}
+    },
+    {
+        "label": "check_flat_status",
+        "kind": 2,
+        "importPath": "Validation",
+        "description": "Validation",
+        "peekOfCode": "def check_flat_status(flats):\n    \"\"\"Tag flats that need special handling on their receipt:\n    non-paying (arrears) and vacant (still billed, flagged as such).\"\"\"\n    flags = []\n    for f in flats:\n        if not f.get(\"paid\", True):\n            flags.append({\n                \"type\": \"ARREARS\",\n                \"flatNo\": f[\"flatNo\"],\n                \"message\": f\"Flat {f['flatNo']} has not paid this month's dues — \"",
+        "detail": "Validation",
+        "documentation": {}
+    },
+    {
+        "label": "validate_submission",
+        "kind": 2,
+        "importPath": "Validation",
+        "description": "Validation",
+        "peekOfCode": "def validate_submission(data, history=None):\n    \"\"\"Run all checks and return one consolidated report.\n    This is the function Lambda calls before anything goes to Bedrock —\n    the report gets attached to the receipt context so the AI can reference\n    known issues instead of guessing or hallucinating explanations.\"\"\"\n    expenses = data[\"expenses\"]\n    flats = data[\"flats\"]\n    total_collected = data[\"totalCollected\"]\n    duplicate_flags = check_duplicates(expenses)\n    outlier_flags = check_outliers(expenses, history)",
+        "detail": "Validation",
+        "documentation": {}
+    },
+    {
+        "label": "EXPECTED_CATEGORIES",
+        "kind": 5,
+        "importPath": "Validation",
+        "description": "Validation",
+        "peekOfCode": "EXPECTED_CATEGORIES = {\n    \"Security\", \"Housekeeping\", \"Water\", \"Common Electricity\",\n    \"Lift AMC\", \"Reserve Fund\", \"Generator Diesel\"\n}\n# How far an expense can deviate from its category's typical value before\n# it's flagged as a likely typo. 3x is deliberately loose — tune per category\n# once you have real historical data instead of one month of fake data.\nOUTLIER_MULTIPLIER = 3\ndef check_duplicates(expenses):\n    \"\"\"Flag expenses that share category + vendor + amount + month.",
+        "detail": "Validation",
+        "documentation": {}
+    },
+    {
+        "label": "OUTLIER_MULTIPLIER",
+        "kind": 5,
+        "importPath": "Validation",
+        "description": "Validation",
+        "peekOfCode": "OUTLIER_MULTIPLIER = 3\ndef check_duplicates(expenses):\n    \"\"\"Flag expenses that share category + vendor + amount + month.\n    Catches E004/E005 in the sample data (same electricity bill twice).\"\"\"\n    seen = defaultdict(list)\n    for e in expenses:\n        key = (e[\"category\"], e[\"vendor\"], e[\"amount\"], e[\"date\"][:7])  # YYYY-MM\n        seen[key].append(e[\"id\"])\n    flags = []\n    for key, ids in seen.items():",
+        "detail": "Validation",
+        "documentation": {}
+    }
+]

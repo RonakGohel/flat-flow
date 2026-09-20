@@ -3,6 +3,19 @@ import boto3
 import os
 from boto3.dynamodb.conditions import Key
 
+def require_group(event, allowed):
+    try:
+        claims = event['requestContext']['authorizer']['claims']
+    except (KeyError, TypeError):
+        return False, "Missing auth claims."
+    raw = claims.get('cognito:groups', '')
+    groups = raw if isinstance(raw, list) else raw.strip('[]').replace(',', ' ').split()
+    if isinstance(allowed, str):
+        allowed = [allowed]
+    if not any(g in groups for g in allowed):
+        return False, f"Access denied. Requires one of: {', '.join(allowed)}."
+    return True, None
+    
 # Connect to the single-table DynamoDB setup used across the application.
 # The table name comes from an environment variable so it adapts across environments.
 dynamodb = boto3.resource('dynamodb')
@@ -29,6 +42,11 @@ def build_response(status_code, body):
 
 
 def lambda_handler(event, context):
+
+    ok, err = require_group(event, 'admin')
+    if not ok:
+        return build_response(403, {"message": err})
+
     # GET requests pass query parameters in event['queryStringParameters'].
     # We fallback to an empty dict so accessing parameters doesn't throw a NoneType error.
     query_params = event.get('queryStringParameters') or {}

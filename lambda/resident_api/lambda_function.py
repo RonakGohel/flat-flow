@@ -1,103 +1,186 @@
 import json
-import boto3
 import os
-from decimal import Decimal, ROUND_HALF_UP
+import boto3
+from decimal import Decimal
 from boto3.dynamodb.conditions import Key
 
-# Same single-table setup as our other Lambdas.
-# Reads expense items from the FlatFlow table to build the resident statement view.
-dynamodb = boto3.resource('dynamodb')
-TABLE_NAME = os.environ.get('TABLE_NAME', 'FlatFlow')
-table = dynamodb.Table(TABLE_NAME)
+def require_group(event, allowed):
+    try:
+        claims = event['requestContext']['authorizer']['claims']
+    except (KeyError, TypeError):
+        return False, "Missing auth claims."
+    raw = claims.get('cognito:groups', '')
+    groups = raw if isinstance(raw, list) else raw.strip('[]').replace(',', ' ').split()
+    if isinstance(allowed, str):
+        allowed = [allowed]
+    if not any(g in groups for g in allowed):
+        return False, f"Access denied. Requires one of: {', '.join(allowed)}."
+    return True, None
 
-# Hardcoded default total flats for now, as requested.
-# In a future task, this could be stored in society metadata.
+
+dynamodb = boto3.resource("dynamodb")
+table = dynamodb.Table(os.environ.get("TABLE_NAME", "FlatFlow"))
+
 DEFAULT_TOTAL_FLATS = 20
 
-# CORS headers so our React frontend can call this GET endpoint without the browser blocking it.
-CORS_HEADERS = {
-    "Access-Control-Allow-Origin": "*",
-    "Access-Control-Allow-Headers": "Content-Type,Authorization",
-    "Access-Control-Allow-Methods": "GET,OPTIONS",
-    "Content-Type": "application/json"
-}
+
+def decimal_to_number(value):
+    if isinstance(value, Decimal):
+        if value % 1 == 0:
+            return int(value)
+        return float(value)
+
+    return value
 
 
-def build_response(status_code, body):
-    # Helper to make sure every response has the right shape for API Gateway.
-    # We use default=str so Decimal values from DynamoDB don't crash json.dumps.
+def response(status_code, body):
     return {
         "statusCode": status_code,
-        "headers": CORS_HEADERS,
-        "body": json.dumps(body, default=str)
+        "headers": {
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Headers": "Content-Type,Authorization",
+            "Access-Control-Allow-Methods": "GET,OPTIONS",
+        },
+        "body": json.dumps(body, default=decimal_to_number),
     }
 
 
 def lambda_handler(event, context):
-    # GET requests send parameters in query string parameters instead of a JSON request body.
-    # We extract queryStringParameters safely in case the caller sends no parameters at all.
-    query_params = event.get('queryStringParameters') or {}
 
-    society_id = query_params.get('society_id')
-    month = query_params.get('month')
-
-    # Validate query string parameters upfront so the caller gets helpful 400 responses.
-    if not society_id:
-        return build_response(400, {"message": "Missing required query parameter: 'society_id'."})
-    if not month:
-        return build_response(400, {"message": "Missing required query parameter: 'month'."})
+    ok, err = require_group(event, 'resident')
+    if not ok:
+        return build_response(403, {"message": err})
 
     try:
-        # Query DynamoDB using the same single-table partition/sort key pattern as Task 2.
-        # PK = SOCIETY#<id>, SK begins_with EXPENSE#<month> grabs every expense for that month.
-        pk = f"SOCIETY#{society_id}"
-        sk_prefix = f"EXPENSE#{month}"
+        query_params = event.get("queryStringParameters") or {}
 
-        response = table.query(
-            KeyConditionExpression=Key('PK').eq(pk) & Key('SK').begins_with(sk_prefix)
+        society_id = query_params.get("society_id")
+        month = query_params.get("month")
+
+        if not society_id:
+            return response(
+                400,
+                {"message": "society_id is required"},
+            )
+
+        if not month:
+            return response(
+                400,
+                {"message": "month is required"},
+            )
+
+        # ---------------------------------------------------------
+        # 1. Load society metadata
+        # ---------------------------------------------------------
+
+        society_result = table.get_item(
+            Key={
+                "PK": f"SOCIETY#{society_id}",
+                "SK": "META",
+            }
         )
 
-        items = response.get('Items', [])
+        society = society_result.get("Item", {})
 
-        # If there are no expenses found for this month, return a 404 so the frontend
-        # can display a clear "No statement available" message rather than empty data.
+        total_flats = society.get(
+            "total_flats",
+            DEFAULT_TOTAL_FLATS,
+        )
+
+        total_flats = int(total_flats)
+
+        if total_flats <= 0:
+            return response(
+                500,
+                {"message": "Invalid total_flats configured for society"},
+            )
+
+        # ---------------------------------------------------------
+        # 2. Load monthly expenses
+        # ---------------------------------------------------------
+
+        result = table.query(
+            KeyConditionExpression=(
+                Key("PK").eq(f"SOCIETY#{society_id}")
+                & Key("SK").begins_with(f"EXPENSE#{month}")
+            )
+        )
+
+        items = result.get("Items", [])
+
         if not items:
-            return build_response(404, {
-                "message": f"No expenses found for society '{society_id}' in month '{month}'."
-            })
+            return response(
+                404,
+                {
+                    "message": "No expenses found",
+                    "society_id": society_id,
+                    "month": month,
+                },
+            )
 
-        # Calculate total expense and construct the detailed breakdown for each item.
-        # We use Decimal arithmetic throughout to avoid floating-point rounding errors.
-        total_amount = Decimal('0')
-        expense_breakdown = []
+        # ---------------------------------------------------------
+        # 3. Calculate total expense
+        # ---------------------------------------------------------
+
+        total_expense = sum(
+            Decimal(str(item.get("amount", 0)))
+            for item in items
+        )
+
+        per_flat_amount = (
+            total_expense / Decimal(total_flats)
+        )
+
+        # ---------------------------------------------------------
+        # 4. Build category breakdown
+        # ---------------------------------------------------------
+
+        breakdown = []
 
         for item in items:
-            amount = item['amount']  # Decimal type returned directly by DynamoDB
-            total_amount += amount
-            expense_breakdown.append({
-                "category": item['category'],
-                "amount": amount,
-                "description": item.get('description', '')
-            })
+            breakdown.append(
+                {
+                    "category": item.get("category", "Unknown"),
+                    "amount": item.get("amount", 0),
+                    "description": item.get(
+                        "description",
+                        "",
+                    ),
+                }
+            )
 
-        # Calculate per-flat cost by dividing total expense by the flat count (hardcoded to 20).
-        # We round up half to 2 decimal places to keep currency values precise.
-        total_flats = DEFAULT_TOTAL_FLATS
-        per_flat_amount = (total_amount / Decimal(str(total_flats))).quantize(
-            Decimal('0.01'), rounding=ROUND_HALF_UP
+        # ---------------------------------------------------------
+        # 5. Return live statement
+        # ---------------------------------------------------------
+
+        return response(
+            200,
+            {
+                "society_id": society_id,
+                "society_name": society.get(
+                    "name",
+                    society_id,
+                ),
+                "city": society.get(
+                    "city",
+                    "",
+                ),
+                "month": month,
+                "total_expense": total_expense,
+                "per_flat_amount": per_flat_amount,
+                "total_flats": total_flats,
+                "breakdown": breakdown,
+            },
         )
 
-        # Return the final statement JSON object required by the resident view.
-        return build_response(200, {
-            "society_id": society_id,
-            "month": month,
-            "total_expense": total_amount,
-            "per_flat_amount": per_flat_amount,
-            "total_flats": total_flats,
-            "breakdown": expense_breakdown
-        })
+    except Exception as error:
+        print("ERROR:", str(error))
 
-    except Exception as e:
-        # Catch unexpected errors, log details to CloudWatch, and hide specifics from response.
-        print(f"[ERROR] Failed to fetch statement: {str(e)}")
-        return build_response(500, {"message": "Internal server error."})
+        return response(
+            500,
+            {
+                "message": "Internal server error",
+                "error": str(error),
+            },
+        )

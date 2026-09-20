@@ -1,5 +1,4 @@
 import {
-  ArrowDownRight,
   ArrowUpRight,
   CheckCircle2,
   ChevronRight,

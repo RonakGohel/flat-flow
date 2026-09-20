@@ -24,20 +24,66 @@ type MobileNavProps = {
 }
 
 const residentLinks = [
-  { label: "Overview", icon: BarChart3, to: "/resident", end: true },
-  { label: "Statement", icon: Receipt, to: "/resident/statement" },
-  { label: "History", icon: FileText, to: "/resident/history" },
-  { label: "Ask", icon: FileCheck2, to: "/resident/ask" },
+  {
+    label: "Overview",
+    icon: BarChart3,
+    to: "/resident",
+    end: true,
+  },
+  {
+    label: "Statement",
+    icon: Receipt,
+    to: "/resident/statement",
+  },
+  {
+    label: "History",
+    icon: FileText,
+    to: "/resident/history",
+  },
+  {
+    label: "Ask",
+    icon: FileCheck2,
+    to: "/resident/ask",
+  },
 ]
 
 const adminLinks = [
-  { label: "Overview", icon: Home, to: "/admin", end: true },
-  { label: "Expenses", icon: Receipt, to: "/admin/expenses" },
-  { label: "Documents", icon: Upload, to: "/admin/documents" },
-  { label: "Flats", icon: Users, to: "/admin/flats" },
-  { label: "Validation", icon: FileCheck2, to: "/admin/validation" },
-  { label: "Statements", icon: FileText, to: "/admin/statements" },
-  { label: "Publish", icon: BarChart3, to: "/admin/publish" },
+  {
+    label: "Overview",
+    icon: Home,
+    to: "/admin",
+    end: true,
+  },
+  {
+    label: "Expenses",
+    icon: Receipt,
+    to: "/admin/expenses",
+  },
+  {
+    label: "Documents",
+    icon: Upload,
+    to: "/admin/documents",
+  },
+  {
+    label: "Flats",
+    icon: Users,
+    to: "/admin/flats",
+  },
+  {
+    label: "Validation",
+    icon: FileCheck2,
+    to: "/admin/validation",
+  },
+  {
+    label: "Statements",
+    icon: FileText,
+    to: "/admin/statements",
+  },
+  {
+    label: "Publish",
+    icon: BarChart3,
+    to: "/admin/publish",
+  },
 ]
 
 export default function MobileNav({ mode }: MobileNavProps) {
@@ -48,14 +94,11 @@ export default function MobileNav({ mode }: MobileNavProps) {
 
   return (
     <Sheet open={open} onOpenChange={setOpen}>
-      <SheetTrigger asChild>
-        <button
-          type="button"
-          className="flex h-9 w-9 items-center justify-center rounded-lg text-neutral-600 transition hover:bg-neutral-100 hover:text-neutral-950"
-          aria-label="Open navigation"
-        >
-          <Menu className="h-5 w-5" />
-        </button>
+      <SheetTrigger
+        className="flex h-9 w-9 items-center justify-center rounded-lg text-neutral-600 transition hover:bg-neutral-100 hover:text-neutral-950"
+        aria-label="Open navigation"
+      >
+        <Menu className="h-5 w-5" />
       </SheetTrigger>
 
       <SheetContent
@@ -113,17 +156,24 @@ export default function MobileNav({ mode }: MobileNavProps) {
           <div className="rounded-lg bg-neutral-50 p-3">
             {isAdmin ? (
               <>
-                <p className="text-xs text-neutral-500">Society</p>
+                <p className="text-xs text-neutral-500">
+                  Society
+                </p>
+
                 <p className="mt-1 text-sm font-medium text-neutral-950">
                   Greenview Residency
                 </p>
+
                 <p className="mt-1 text-xs text-neutral-400">
                   96 flats · Pune
                 </p>
               </>
             ) : (
               <>
-                <p className="text-xs text-neutral-500">Current flat</p>
+                <p className="text-xs text-neutral-500">
+                  Current flat
+                </p>
+
                 <p className="mt-1 text-sm font-medium text-neutral-950">
                   A-204
                 </p>

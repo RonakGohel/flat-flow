@@ -1,20 +1,20 @@
 [
     {
-        "label": "json",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "json",
-        "description": "json",
-        "detail": "json",
-        "documentation": {}
-    },
-    {
         "label": "boto3",
         "kind": 6,
         "isExtraImport": true,
         "importPath": "boto3",
         "description": "boto3",
         "detail": "boto3",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
         "documentation": {}
     },
     {
@@ -67,60 +67,86 @@
         "documentation": {}
     },
     {
-        "label": "Decimal",
-        "importPath": "decimal",
-        "description": "decimal",
-        "isExtraImport": true,
-        "detail": "decimal",
-        "documentation": {}
-    },
-    {
-        "label": "ROUND_HALF_UP",
-        "importPath": "decimal",
-        "description": "decimal",
-        "isExtraImport": true,
-        "detail": "decimal",
-        "documentation": {}
-    },
-    {
-        "label": "Decimal",
-        "importPath": "decimal",
-        "description": "decimal",
-        "isExtraImport": true,
-        "detail": "decimal",
-        "documentation": {}
-    },
-    {
-        "label": "Decimal",
-        "importPath": "decimal",
-        "description": "decimal",
-        "isExtraImport": true,
-        "detail": "decimal",
-        "documentation": {}
-    },
-    {
-        "label": "ROUND_HALF_UP",
-        "importPath": "decimal",
-        "description": "decimal",
-        "isExtraImport": true,
-        "detail": "decimal",
-        "documentation": {}
-    },
-    {
-        "label": "Decimal",
-        "importPath": "decimal",
-        "description": "decimal",
-        "isExtraImport": true,
-        "detail": "decimal",
-        "documentation": {}
-    },
-    {
         "label": "uuid",
         "kind": 6,
         "isExtraImport": true,
         "importPath": "uuid",
         "description": "uuid",
         "detail": "uuid",
+        "documentation": {}
+    },
+    {
+        "label": "Decimal",
+        "importPath": "decimal",
+        "description": "decimal",
+        "isExtraImport": true,
+        "detail": "decimal",
+        "documentation": {}
+    },
+    {
+        "label": "Decimal",
+        "importPath": "decimal",
+        "description": "decimal",
+        "isExtraImport": true,
+        "detail": "decimal",
+        "documentation": {}
+    },
+    {
+        "label": "ROUND_HALF_UP",
+        "importPath": "decimal",
+        "description": "decimal",
+        "isExtraImport": true,
+        "detail": "decimal",
+        "documentation": {}
+    },
+    {
+        "label": "Decimal",
+        "importPath": "decimal",
+        "description": "decimal",
+        "isExtraImport": true,
+        "detail": "decimal",
+        "documentation": {}
+    },
+    {
+        "label": "Decimal",
+        "importPath": "decimal",
+        "description": "decimal",
+        "isExtraImport": true,
+        "detail": "decimal",
+        "documentation": {}
+    },
+    {
+        "label": "ROUND_HALF_UP",
+        "importPath": "decimal",
+        "description": "decimal",
+        "isExtraImport": true,
+        "detail": "decimal",
+        "documentation": {}
+    },
+    {
+        "label": "Decimal",
+        "importPath": "decimal",
+        "description": "decimal",
+        "isExtraImport": true,
+        "detail": "decimal",
+        "documentation": {}
+    },
+    {
+        "label": "re",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "re",
+        "description": "re",
+        "detail": "re",
+        "documentation": {}
+    },
+    {
+        "label": "base64",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "base64",
+        "description": "base64",
+        "detail": "base64",
         "documentation": {}
     },
     {
@@ -180,6 +206,42 @@
         "description": "statistics",
         "isExtraImport": true,
         "detail": "statistics",
+        "documentation": {}
+    },
+    {
+        "label": "upload_bill",
+        "kind": 2,
+        "importPath": "backend.services.s3_service",
+        "description": "backend.services.s3_service",
+        "peekOfCode": "def upload_bill(file_path, s3_key):\n    \"\"\"\n    Upload a bill/invoice to the Flat-Flow S3 bucket.\n    \"\"\"\n    s3.upload_file(file_path, BUCKET_NAME, s3_key)\n    return {\n        \"bucket\": BUCKET_NAME,\n        \"key\": s3_key,\n        \"s3_uri\": f\"s3://{BUCKET_NAME}/{s3_key}\"\n    }",
+        "detail": "backend.services.s3_service",
+        "documentation": {}
+    },
+    {
+        "label": "BUCKET_NAME",
+        "kind": 5,
+        "importPath": "backend.services.s3_service",
+        "description": "backend.services.s3_service",
+        "peekOfCode": "BUCKET_NAME = \"flat-flow-bhakti2701\"\nREGION = \"ap-south-1\"\ns3 = boto3.client(\"s3\", region_name=REGION)\ndef upload_bill(file_path, s3_key):\n    \"\"\"\n    Upload a bill/invoice to the Flat-Flow S3 bucket.\n    \"\"\"\n    s3.upload_file(file_path, BUCKET_NAME, s3_key)\n    return {\n        \"bucket\": BUCKET_NAME,",
+        "detail": "backend.services.s3_service",
+        "documentation": {}
+    },
+    {
+        "label": "REGION",
+        "kind": 5,
+        "importPath": "backend.services.s3_service",
+        "description": "backend.services.s3_service",
+        "peekOfCode": "REGION = \"ap-south-1\"\ns3 = boto3.client(\"s3\", region_name=REGION)\ndef upload_bill(file_path, s3_key):\n    \"\"\"\n    Upload a bill/invoice to the Flat-Flow S3 bucket.\n    \"\"\"\n    s3.upload_file(file_path, BUCKET_NAME, s3_key)\n    return {\n        \"bucket\": BUCKET_NAME,\n        \"key\": s3_key,",
+        "detail": "backend.services.s3_service",
+        "documentation": {}
+    },
+    {
+        "label": "s3",
+        "kind": 5,
+        "importPath": "backend.services.s3_service",
+        "description": "backend.services.s3_service",
+        "peekOfCode": "s3 = boto3.client(\"s3\", region_name=REGION)\ndef upload_bill(file_path, s3_key):\n    \"\"\"\n    Upload a bill/invoice to the Flat-Flow S3 bucket.\n    \"\"\"\n    s3.upload_file(file_path, BUCKET_NAME, s3_key)\n    return {\n        \"bucket\": BUCKET_NAME,\n        \"key\": s3_key,\n        \"s3_uri\": f\"s3://{BUCKET_NAME}/{s3_key}\"",
+        "detail": "backend.services.s3_service",
         "documentation": {}
     },
     {
@@ -277,7 +339,7 @@
         "kind": 2,
         "importPath": "lambda.ai_chat.lambda_function",
         "description": "lambda.ai_chat.lambda_function",
-        "peekOfCode": "def build_response(status_code, body):\n    # Helper to make sure every response has the right shape for API Gateway.\n    # We use default=str so Decimal values from DynamoDB don't crash json.dumps.\n    return {\n        \"statusCode\": status_code,\n        \"headers\": CORS_HEADERS,\n        \"body\": json.dumps(body, default=str)\n    }\ndef fetch_expenses(society_id, month):\n    # Query DynamoDB for all expenses belonging to this society in the given month.",
+        "peekOfCode": "def build_response(status_code, body):\n    return {\n        \"statusCode\": status_code,\n        \"headers\": CORS_HEADERS,\n        \"body\": json.dumps(body, default=str)\n    }\ndef fetch_expenses(society_id, month):\n    pk = f\"SOCIETY#{society_id}\"\n    sk_prefix = f\"EXPENSE#{month}\"\n    response = table.query(",
         "detail": "lambda.ai_chat.lambda_function",
         "documentation": {}
     },
@@ -286,7 +348,7 @@
         "kind": 2,
         "importPath": "lambda.ai_chat.lambda_function",
         "description": "lambda.ai_chat.lambda_function",
-        "peekOfCode": "def fetch_expenses(society_id, month):\n    # Query DynamoDB for all expenses belonging to this society in the given month.\n    # Same key pattern as generate_statement: PK = SOCIETY#<id>, SK begins with EXPENSE#<month>.\n    pk = f\"SOCIETY#{society_id}\"\n    sk_prefix = f\"EXPENSE#{month}\"\n    response = table.query(\n        KeyConditionExpression=Key('PK').eq(pk) & Key('SK').begins_with(sk_prefix)\n    )\n    return response.get('Items', [])\ndef build_expense_summary(items):",
+        "peekOfCode": "def fetch_expenses(society_id, month):\n    pk = f\"SOCIETY#{society_id}\"\n    sk_prefix = f\"EXPENSE#{month}\"\n    response = table.query(\n        KeyConditionExpression=Key('PK').eq(pk) &\n        Key('SK').begins_with(sk_prefix)\n    )\n    return response.get('Items', [])\ndef build_expense_summary(items):\n    if not items:",
         "detail": "lambda.ai_chat.lambda_function",
         "documentation": {}
     },
@@ -295,7 +357,16 @@
         "kind": 2,
         "importPath": "lambda.ai_chat.lambda_function",
         "description": "lambda.ai_chat.lambda_function",
-        "peekOfCode": "def build_expense_summary(items):\n    # Turn the raw DynamoDB items into a readable summary string for the AI.\n    # We keep it simple — category, amount, description — so the model has\n    # clean data to work with and doesn't have to parse DynamoDB key formats.\n    if not items:\n        return \"No expenses recorded for this period.\"\n    lines = []\n    total = 0\n    for item in items:\n        category = item.get('category', 'Unknown')",
+        "peekOfCode": "def build_expense_summary(items):\n    if not items:\n        return \"No expenses recorded for this period.\"\n    lines = []\n    total = 0\n    for item in items:\n        category = item.get('category', 'Unknown')\n        amount = item.get('amount', 0)\n        description = item.get('description', '')\n        lines.append(",
+        "detail": "lambda.ai_chat.lambda_function",
+        "documentation": {}
+    },
+    {
+        "label": "build_evidence",
+        "kind": 2,
+        "importPath": "lambda.ai_chat.lambda_function",
+        "description": "lambda.ai_chat.lambda_function",
+        "peekOfCode": "def build_evidence(items):\n    \"\"\"\n    Build evidence directly from DynamoDB.\n    This is intentionally created by code rather than Bedrock,\n    so the AI cannot invent supporting financial figures.\n    \"\"\"\n    evidence = []\n    for item in items:\n        evidence.append({\n            \"category\": item.get(\"category\", \"Unknown\"),",
         "detail": "lambda.ai_chat.lambda_function",
         "documentation": {}
     },
@@ -304,7 +375,7 @@
         "kind": 2,
         "importPath": "lambda.ai_chat.lambda_function",
         "description": "lambda.ai_chat.lambda_function",
-        "peekOfCode": "def lambda_handler(event, context):\n    # Parse the incoming request body. API Gateway sends it as a raw string.\n    try:\n        body = json.loads(event.get('body', '{}'))\n    except (json.JSONDecodeError, TypeError):\n        return build_response(400, {\"message\": \"Invalid JSON in request body.\"})\n    society_id = body.get('society_id')\n    month = body.get('month')\n    resident_question = body.get('resident_question')\n    # Validate all three required fields upfront so the frontend gets clear error messages.",
+        "peekOfCode": "def lambda_handler(event, context):\n    try:\n        body = json.loads(event.get('body', '{}'))\n    except (json.JSONDecodeError, TypeError):\n        return build_response(\n            400,\n            {\"message\": \"Invalid JSON in request body.\"}\n        )\n    society_id = body.get('society_id')\n    month = body.get('month')",
         "detail": "lambda.ai_chat.lambda_function",
         "documentation": {}
     },
@@ -313,7 +384,7 @@
         "kind": 5,
         "importPath": "lambda.ai_chat.lambda_function",
         "description": "lambda.ai_chat.lambda_function",
-        "peekOfCode": "dynamodb = boto3.resource('dynamodb')\nTABLE_NAME = os.environ.get('TABLE_NAME', 'FlatFlow')\ntable = dynamodb.Table(TABLE_NAME)\n# Bedrock client for calling Claude. We use bedrock-runtime (not bedrock)\n# because we're invoking a model, not managing one.\nbedrock_runtime = boto3.client('bedrock-runtime')\nMODEL_ID = 'anthropic.claude-3-haiku-20240307-v1:0'\n# CORS headers so our React frontend can call this endpoint without the browser blocking it.\nCORS_HEADERS = {\n    \"Access-Control-Allow-Origin\": \"*\",",
+        "peekOfCode": "dynamodb = boto3.resource('dynamodb')\nTABLE_NAME = os.environ.get('TABLE_NAME', 'FlatFlow')\ntable = dynamodb.Table(TABLE_NAME)\nbedrock_runtime = boto3.client('bedrock-runtime')\nMODEL_ID = 'anthropic.claude-sonnet-4-20250514-v1:0'\nCORS_HEADERS = {\n    \"Access-Control-Allow-Origin\": \"*\",\n    \"Access-Control-Allow-Headers\": \"Content-Type,Authorization\",\n    \"Access-Control-Allow-Methods\": \"POST,OPTIONS\",\n    \"Content-Type\": \"application/json\"",
         "detail": "lambda.ai_chat.lambda_function",
         "documentation": {}
     },
@@ -322,7 +393,7 @@
         "kind": 5,
         "importPath": "lambda.ai_chat.lambda_function",
         "description": "lambda.ai_chat.lambda_function",
-        "peekOfCode": "TABLE_NAME = os.environ.get('TABLE_NAME', 'FlatFlow')\ntable = dynamodb.Table(TABLE_NAME)\n# Bedrock client for calling Claude. We use bedrock-runtime (not bedrock)\n# because we're invoking a model, not managing one.\nbedrock_runtime = boto3.client('bedrock-runtime')\nMODEL_ID = 'anthropic.claude-3-haiku-20240307-v1:0'\n# CORS headers so our React frontend can call this endpoint without the browser blocking it.\nCORS_HEADERS = {\n    \"Access-Control-Allow-Origin\": \"*\",\n    \"Access-Control-Allow-Headers\": \"Content-Type,Authorization\",",
+        "peekOfCode": "TABLE_NAME = os.environ.get('TABLE_NAME', 'FlatFlow')\ntable = dynamodb.Table(TABLE_NAME)\nbedrock_runtime = boto3.client('bedrock-runtime')\nMODEL_ID = 'anthropic.claude-sonnet-4-20250514-v1:0'\nCORS_HEADERS = {\n    \"Access-Control-Allow-Origin\": \"*\",\n    \"Access-Control-Allow-Headers\": \"Content-Type,Authorization\",\n    \"Access-Control-Allow-Methods\": \"POST,OPTIONS\",\n    \"Content-Type\": \"application/json\"\n}",
         "detail": "lambda.ai_chat.lambda_function",
         "documentation": {}
     },
@@ -331,7 +402,7 @@
         "kind": 5,
         "importPath": "lambda.ai_chat.lambda_function",
         "description": "lambda.ai_chat.lambda_function",
-        "peekOfCode": "table = dynamodb.Table(TABLE_NAME)\n# Bedrock client for calling Claude. We use bedrock-runtime (not bedrock)\n# because we're invoking a model, not managing one.\nbedrock_runtime = boto3.client('bedrock-runtime')\nMODEL_ID = 'anthropic.claude-3-haiku-20240307-v1:0'\n# CORS headers so our React frontend can call this endpoint without the browser blocking it.\nCORS_HEADERS = {\n    \"Access-Control-Allow-Origin\": \"*\",\n    \"Access-Control-Allow-Headers\": \"Content-Type,Authorization\",\n    \"Access-Control-Allow-Methods\": \"POST,OPTIONS\",",
+        "peekOfCode": "table = dynamodb.Table(TABLE_NAME)\nbedrock_runtime = boto3.client('bedrock-runtime')\nMODEL_ID = 'anthropic.claude-sonnet-4-20250514-v1:0'\nCORS_HEADERS = {\n    \"Access-Control-Allow-Origin\": \"*\",\n    \"Access-Control-Allow-Headers\": \"Content-Type,Authorization\",\n    \"Access-Control-Allow-Methods\": \"POST,OPTIONS\",\n    \"Content-Type\": \"application/json\"\n}\ndef build_response(status_code, body):",
         "detail": "lambda.ai_chat.lambda_function",
         "documentation": {}
     },
@@ -340,7 +411,7 @@
         "kind": 5,
         "importPath": "lambda.ai_chat.lambda_function",
         "description": "lambda.ai_chat.lambda_function",
-        "peekOfCode": "bedrock_runtime = boto3.client('bedrock-runtime')\nMODEL_ID = 'anthropic.claude-3-haiku-20240307-v1:0'\n# CORS headers so our React frontend can call this endpoint without the browser blocking it.\nCORS_HEADERS = {\n    \"Access-Control-Allow-Origin\": \"*\",\n    \"Access-Control-Allow-Headers\": \"Content-Type,Authorization\",\n    \"Access-Control-Allow-Methods\": \"POST,OPTIONS\",\n    \"Content-Type\": \"application/json\"\n}\ndef build_response(status_code, body):",
+        "peekOfCode": "bedrock_runtime = boto3.client('bedrock-runtime')\nMODEL_ID = 'anthropic.claude-sonnet-4-20250514-v1:0'\nCORS_HEADERS = {\n    \"Access-Control-Allow-Origin\": \"*\",\n    \"Access-Control-Allow-Headers\": \"Content-Type,Authorization\",\n    \"Access-Control-Allow-Methods\": \"POST,OPTIONS\",\n    \"Content-Type\": \"application/json\"\n}\ndef build_response(status_code, body):\n    return {",
         "detail": "lambda.ai_chat.lambda_function",
         "documentation": {}
     },
@@ -349,7 +420,7 @@
         "kind": 5,
         "importPath": "lambda.ai_chat.lambda_function",
         "description": "lambda.ai_chat.lambda_function",
-        "peekOfCode": "MODEL_ID = 'anthropic.claude-3-haiku-20240307-v1:0'\n# CORS headers so our React frontend can call this endpoint without the browser blocking it.\nCORS_HEADERS = {\n    \"Access-Control-Allow-Origin\": \"*\",\n    \"Access-Control-Allow-Headers\": \"Content-Type,Authorization\",\n    \"Access-Control-Allow-Methods\": \"POST,OPTIONS\",\n    \"Content-Type\": \"application/json\"\n}\ndef build_response(status_code, body):\n    # Helper to make sure every response has the right shape for API Gateway.",
+        "peekOfCode": "MODEL_ID = 'anthropic.claude-sonnet-4-20250514-v1:0'\nCORS_HEADERS = {\n    \"Access-Control-Allow-Origin\": \"*\",\n    \"Access-Control-Allow-Headers\": \"Content-Type,Authorization\",\n    \"Access-Control-Allow-Methods\": \"POST,OPTIONS\",\n    \"Content-Type\": \"application/json\"\n}\ndef build_response(status_code, body):\n    return {\n        \"statusCode\": status_code,",
         "detail": "lambda.ai_chat.lambda_function",
         "documentation": {}
     },
@@ -358,8 +429,62 @@
         "kind": 5,
         "importPath": "lambda.ai_chat.lambda_function",
         "description": "lambda.ai_chat.lambda_function",
-        "peekOfCode": "CORS_HEADERS = {\n    \"Access-Control-Allow-Origin\": \"*\",\n    \"Access-Control-Allow-Headers\": \"Content-Type,Authorization\",\n    \"Access-Control-Allow-Methods\": \"POST,OPTIONS\",\n    \"Content-Type\": \"application/json\"\n}\ndef build_response(status_code, body):\n    # Helper to make sure every response has the right shape for API Gateway.\n    # We use default=str so Decimal values from DynamoDB don't crash json.dumps.\n    return {",
+        "peekOfCode": "CORS_HEADERS = {\n    \"Access-Control-Allow-Origin\": \"*\",\n    \"Access-Control-Allow-Headers\": \"Content-Type,Authorization\",\n    \"Access-Control-Allow-Methods\": \"POST,OPTIONS\",\n    \"Content-Type\": \"application/json\"\n}\ndef build_response(status_code, body):\n    return {\n        \"statusCode\": status_code,\n        \"headers\": CORS_HEADERS,",
         "detail": "lambda.ai_chat.lambda_function",
+        "documentation": {}
+    },
+    {
+        "label": "build_response",
+        "kind": 2,
+        "importPath": "lambda.confirm_bill.lambda_function",
+        "description": "lambda.confirm_bill.lambda_function",
+        "peekOfCode": "def build_response(status_code, body):\n    return {\n        \"statusCode\": status_code,\n        \"headers\": CORS_HEADERS,\n        \"body\": json.dumps(body, default=str)\n    }\ndef lambda_handler(event, context):\n    try:\n        body = json.loads(event.get(\"body\", \"{}\"))\n    except (json.JSONDecodeError, TypeError):",
+        "detail": "lambda.confirm_bill.lambda_function",
+        "documentation": {}
+    },
+    {
+        "label": "lambda_handler",
+        "kind": 2,
+        "importPath": "lambda.confirm_bill.lambda_function",
+        "description": "lambda.confirm_bill.lambda_function",
+        "peekOfCode": "def lambda_handler(event, context):\n    try:\n        body = json.loads(event.get(\"body\", \"{}\"))\n    except (json.JSONDecodeError, TypeError):\n        return build_response(\n            400,\n            {\"message\": \"Invalid JSON in request body.\"}\n        )\n    society_id = body.get(\"society_id\")\n    month = body.get(\"month\")",
+        "detail": "lambda.confirm_bill.lambda_function",
+        "documentation": {}
+    },
+    {
+        "label": "dynamodb",
+        "kind": 5,
+        "importPath": "lambda.confirm_bill.lambda_function",
+        "description": "lambda.confirm_bill.lambda_function",
+        "peekOfCode": "dynamodb = boto3.resource(\"dynamodb\")\nTABLE_NAME = os.environ.get(\"TABLE_NAME\", \"FlatFlow\")\ntable = dynamodb.Table(TABLE_NAME)\nCORS_HEADERS = {\n    \"Access-Control-Allow-Origin\": \"*\",\n    \"Access-Control-Allow-Headers\": \"Content-Type,Authorization\",\n    \"Access-Control-Allow-Methods\": \"POST,OPTIONS\",\n    \"Content-Type\": \"application/json\"\n}\ndef build_response(status_code, body):",
+        "detail": "lambda.confirm_bill.lambda_function",
+        "documentation": {}
+    },
+    {
+        "label": "TABLE_NAME",
+        "kind": 5,
+        "importPath": "lambda.confirm_bill.lambda_function",
+        "description": "lambda.confirm_bill.lambda_function",
+        "peekOfCode": "TABLE_NAME = os.environ.get(\"TABLE_NAME\", \"FlatFlow\")\ntable = dynamodb.Table(TABLE_NAME)\nCORS_HEADERS = {\n    \"Access-Control-Allow-Origin\": \"*\",\n    \"Access-Control-Allow-Headers\": \"Content-Type,Authorization\",\n    \"Access-Control-Allow-Methods\": \"POST,OPTIONS\",\n    \"Content-Type\": \"application/json\"\n}\ndef build_response(status_code, body):\n    return {",
+        "detail": "lambda.confirm_bill.lambda_function",
+        "documentation": {}
+    },
+    {
+        "label": "table",
+        "kind": 5,
+        "importPath": "lambda.confirm_bill.lambda_function",
+        "description": "lambda.confirm_bill.lambda_function",
+        "peekOfCode": "table = dynamodb.Table(TABLE_NAME)\nCORS_HEADERS = {\n    \"Access-Control-Allow-Origin\": \"*\",\n    \"Access-Control-Allow-Headers\": \"Content-Type,Authorization\",\n    \"Access-Control-Allow-Methods\": \"POST,OPTIONS\",\n    \"Content-Type\": \"application/json\"\n}\ndef build_response(status_code, body):\n    return {\n        \"statusCode\": status_code,",
+        "detail": "lambda.confirm_bill.lambda_function",
+        "documentation": {}
+    },
+    {
+        "label": "CORS_HEADERS",
+        "kind": 5,
+        "importPath": "lambda.confirm_bill.lambda_function",
+        "description": "lambda.confirm_bill.lambda_function",
+        "peekOfCode": "CORS_HEADERS = {\n    \"Access-Control-Allow-Origin\": \"*\",\n    \"Access-Control-Allow-Headers\": \"Content-Type,Authorization\",\n    \"Access-Control-Allow-Methods\": \"POST,OPTIONS\",\n    \"Content-Type\": \"application/json\"\n}\ndef build_response(status_code, body):\n    return {\n        \"statusCode\": status_code,\n        \"headers\": CORS_HEADERS,",
+        "detail": "lambda.confirm_bill.lambda_function",
         "documentation": {}
     },
     {
@@ -473,6 +598,96 @@
     {
         "label": "build_response",
         "kind": 2,
+        "importPath": "lambda.process_bill.lambda_function",
+        "description": "lambda.process_bill.lambda_function",
+        "peekOfCode": "def build_response(status_code, body):\n    return {\n        \"statusCode\": status_code,\n        \"headers\": CORS_HEADERS,\n        \"body\": json.dumps(body, default=str)\n    }\ndef extract_text_from_s3(bucket, key):\n    response = textract.detect_document_text(\n        Document={\n            \"S3Object\": {",
+        "detail": "lambda.process_bill.lambda_function",
+        "documentation": {}
+    },
+    {
+        "label": "extract_text_from_s3",
+        "kind": 2,
+        "importPath": "lambda.process_bill.lambda_function",
+        "description": "lambda.process_bill.lambda_function",
+        "peekOfCode": "def extract_text_from_s3(bucket, key):\n    response = textract.detect_document_text(\n        Document={\n            \"S3Object\": {\n                \"Bucket\": bucket,\n                \"Name\": key\n            }\n        }\n    )\n    lines = []",
+        "detail": "lambda.process_bill.lambda_function",
+        "documentation": {}
+    },
+    {
+        "label": "parse_bill_text",
+        "kind": 2,
+        "importPath": "lambda.process_bill.lambda_function",
+        "description": "lambda.process_bill.lambda_function",
+        "peekOfCode": "def parse_bill_text(text):\n    result = {\n        \"category\": None,\n        \"amount\": None,\n        \"description\": None,\n        \"bill_date\": None,\n        \"due_date\": None\n    }\n    # -----------------------------\n    # Extract amount",
+        "detail": "lambda.process_bill.lambda_function",
+        "documentation": {}
+    },
+    {
+        "label": "lambda_handler",
+        "kind": 2,
+        "importPath": "lambda.process_bill.lambda_function",
+        "description": "lambda.process_bill.lambda_function",
+        "peekOfCode": "def lambda_handler(event, context):\n    try:\n        body = json.loads(\n            event.get(\"body\", \"{}\")\n        )\n    except (json.JSONDecodeError, TypeError):\n        return build_response(\n            400,\n            {\n                \"message\": \"Invalid JSON in request body.\"",
+        "detail": "lambda.process_bill.lambda_function",
+        "documentation": {}
+    },
+    {
+        "label": "s3",
+        "kind": 5,
+        "importPath": "lambda.process_bill.lambda_function",
+        "description": "lambda.process_bill.lambda_function",
+        "peekOfCode": "s3 = boto3.client(\"s3\")\ntextract = boto3.client(\"textract\")\ndynamodb = boto3.resource(\"dynamodb\")\nTABLE_NAME = os.environ.get(\"TABLE_NAME\", \"FlatFlow\")\ntable = dynamodb.Table(TABLE_NAME)\nCORS_HEADERS = {\n    \"Access-Control-Allow-Origin\": \"*\",\n    \"Access-Control-Allow-Headers\": \"Content-Type,Authorization\",\n    \"Access-Control-Allow-Methods\": \"POST,OPTIONS\",\n    \"Content-Type\": \"application/json\"",
+        "detail": "lambda.process_bill.lambda_function",
+        "documentation": {}
+    },
+    {
+        "label": "textract",
+        "kind": 5,
+        "importPath": "lambda.process_bill.lambda_function",
+        "description": "lambda.process_bill.lambda_function",
+        "peekOfCode": "textract = boto3.client(\"textract\")\ndynamodb = boto3.resource(\"dynamodb\")\nTABLE_NAME = os.environ.get(\"TABLE_NAME\", \"FlatFlow\")\ntable = dynamodb.Table(TABLE_NAME)\nCORS_HEADERS = {\n    \"Access-Control-Allow-Origin\": \"*\",\n    \"Access-Control-Allow-Headers\": \"Content-Type,Authorization\",\n    \"Access-Control-Allow-Methods\": \"POST,OPTIONS\",\n    \"Content-Type\": \"application/json\"\n}",
+        "detail": "lambda.process_bill.lambda_function",
+        "documentation": {}
+    },
+    {
+        "label": "dynamodb",
+        "kind": 5,
+        "importPath": "lambda.process_bill.lambda_function",
+        "description": "lambda.process_bill.lambda_function",
+        "peekOfCode": "dynamodb = boto3.resource(\"dynamodb\")\nTABLE_NAME = os.environ.get(\"TABLE_NAME\", \"FlatFlow\")\ntable = dynamodb.Table(TABLE_NAME)\nCORS_HEADERS = {\n    \"Access-Control-Allow-Origin\": \"*\",\n    \"Access-Control-Allow-Headers\": \"Content-Type,Authorization\",\n    \"Access-Control-Allow-Methods\": \"POST,OPTIONS\",\n    \"Content-Type\": \"application/json\"\n}\ndef build_response(status_code, body):",
+        "detail": "lambda.process_bill.lambda_function",
+        "documentation": {}
+    },
+    {
+        "label": "TABLE_NAME",
+        "kind": 5,
+        "importPath": "lambda.process_bill.lambda_function",
+        "description": "lambda.process_bill.lambda_function",
+        "peekOfCode": "TABLE_NAME = os.environ.get(\"TABLE_NAME\", \"FlatFlow\")\ntable = dynamodb.Table(TABLE_NAME)\nCORS_HEADERS = {\n    \"Access-Control-Allow-Origin\": \"*\",\n    \"Access-Control-Allow-Headers\": \"Content-Type,Authorization\",\n    \"Access-Control-Allow-Methods\": \"POST,OPTIONS\",\n    \"Content-Type\": \"application/json\"\n}\ndef build_response(status_code, body):\n    return {",
+        "detail": "lambda.process_bill.lambda_function",
+        "documentation": {}
+    },
+    {
+        "label": "table",
+        "kind": 5,
+        "importPath": "lambda.process_bill.lambda_function",
+        "description": "lambda.process_bill.lambda_function",
+        "peekOfCode": "table = dynamodb.Table(TABLE_NAME)\nCORS_HEADERS = {\n    \"Access-Control-Allow-Origin\": \"*\",\n    \"Access-Control-Allow-Headers\": \"Content-Type,Authorization\",\n    \"Access-Control-Allow-Methods\": \"POST,OPTIONS\",\n    \"Content-Type\": \"application/json\"\n}\ndef build_response(status_code, body):\n    return {\n        \"statusCode\": status_code,",
+        "detail": "lambda.process_bill.lambda_function",
+        "documentation": {}
+    },
+    {
+        "label": "CORS_HEADERS",
+        "kind": 5,
+        "importPath": "lambda.process_bill.lambda_function",
+        "description": "lambda.process_bill.lambda_function",
+        "peekOfCode": "CORS_HEADERS = {\n    \"Access-Control-Allow-Origin\": \"*\",\n    \"Access-Control-Allow-Headers\": \"Content-Type,Authorization\",\n    \"Access-Control-Allow-Methods\": \"POST,OPTIONS\",\n    \"Content-Type\": \"application/json\"\n}\ndef build_response(status_code, body):\n    return {\n        \"statusCode\": status_code,\n        \"headers\": CORS_HEADERS,",
+        "detail": "lambda.process_bill.lambda_function",
+        "documentation": {}
+    },
+    {
+        "label": "build_response",
+        "kind": 2,
         "importPath": "lambda.resident_api.lambda_function",
         "description": "lambda.resident_api.lambda_function",
         "peekOfCode": "def build_response(status_code, body):\n    # Helper to make sure every response has the right shape for API Gateway.\n    # We use default=str so Decimal values from DynamoDB don't crash json.dumps.\n    return {\n        \"statusCode\": status_code,\n        \"headers\": CORS_HEADERS,\n        \"body\": json.dumps(body, default=str)\n    }\ndef lambda_handler(event, context):\n    # GET requests send parameters in query string parameters instead of a JSON request body.",
@@ -531,6 +746,51 @@
         "description": "lambda.resident_api.lambda_function",
         "peekOfCode": "CORS_HEADERS = {\n    \"Access-Control-Allow-Origin\": \"*\",\n    \"Access-Control-Allow-Headers\": \"Content-Type,Authorization\",\n    \"Access-Control-Allow-Methods\": \"GET,OPTIONS\",\n    \"Content-Type\": \"application/json\"\n}\ndef build_response(status_code, body):\n    # Helper to make sure every response has the right shape for API Gateway.\n    # We use default=str so Decimal values from DynamoDB don't crash json.dumps.\n    return {",
         "detail": "lambda.resident_api.lambda_function",
+        "documentation": {}
+    },
+    {
+        "label": "build_response",
+        "kind": 2,
+        "importPath": "lambda.upload_bill.lambda_function",
+        "description": "lambda.upload_bill.lambda_function",
+        "peekOfCode": "def build_response(status_code, body):\n    return {\n        \"statusCode\": status_code,\n        \"headers\": CORS_HEADERS,\n        \"body\": json.dumps(body)\n    }\ndef lambda_handler(event, context):\n    try:\n        body = json.loads(event.get(\"body\", \"{}\"))\n    except (json.JSONDecodeError, TypeError):",
+        "detail": "lambda.upload_bill.lambda_function",
+        "documentation": {}
+    },
+    {
+        "label": "lambda_handler",
+        "kind": 2,
+        "importPath": "lambda.upload_bill.lambda_function",
+        "description": "lambda.upload_bill.lambda_function",
+        "peekOfCode": "def lambda_handler(event, context):\n    try:\n        body = json.loads(event.get(\"body\", \"{}\"))\n    except (json.JSONDecodeError, TypeError):\n        return build_response(\n            400,\n            {\"message\": \"Invalid JSON in request body.\"}\n        )\n    society_id = body.get(\"society_id\")\n    month = body.get(\"month\")",
+        "detail": "lambda.upload_bill.lambda_function",
+        "documentation": {}
+    },
+    {
+        "label": "s3",
+        "kind": 5,
+        "importPath": "lambda.upload_bill.lambda_function",
+        "description": "lambda.upload_bill.lambda_function",
+        "peekOfCode": "s3 = boto3.client(\"s3\")\nBUCKET_NAME = os.environ.get(\n    \"BILL_BUCKET\",\n    \"flat-flow-bhakti2701\"\n)\nCORS_HEADERS = {\n    \"Access-Control-Allow-Origin\": \"*\",\n    \"Access-Control-Allow-Headers\": \"Content-Type,Authorization\",\n    \"Access-Control-Allow-Methods\": \"POST,OPTIONS\",\n    \"Content-Type\": \"application/json\"",
+        "detail": "lambda.upload_bill.lambda_function",
+        "documentation": {}
+    },
+    {
+        "label": "BUCKET_NAME",
+        "kind": 5,
+        "importPath": "lambda.upload_bill.lambda_function",
+        "description": "lambda.upload_bill.lambda_function",
+        "peekOfCode": "BUCKET_NAME = os.environ.get(\n    \"BILL_BUCKET\",\n    \"flat-flow-bhakti2701\"\n)\nCORS_HEADERS = {\n    \"Access-Control-Allow-Origin\": \"*\",\n    \"Access-Control-Allow-Headers\": \"Content-Type,Authorization\",\n    \"Access-Control-Allow-Methods\": \"POST,OPTIONS\",\n    \"Content-Type\": \"application/json\"\n}",
+        "detail": "lambda.upload_bill.lambda_function",
+        "documentation": {}
+    },
+    {
+        "label": "CORS_HEADERS",
+        "kind": 5,
+        "importPath": "lambda.upload_bill.lambda_function",
+        "description": "lambda.upload_bill.lambda_function",
+        "peekOfCode": "CORS_HEADERS = {\n    \"Access-Control-Allow-Origin\": \"*\",\n    \"Access-Control-Allow-Headers\": \"Content-Type,Authorization\",\n    \"Access-Control-Allow-Methods\": \"POST,OPTIONS\",\n    \"Content-Type\": \"application/json\"\n}\ndef build_response(status_code, body):\n    return {\n        \"statusCode\": status_code,\n        \"headers\": CORS_HEADERS,",
+        "detail": "lambda.upload_bill.lambda_function",
         "documentation": {}
     },
     {
